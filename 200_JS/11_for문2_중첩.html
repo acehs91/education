@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <title>반복문,for문 중첩</title>
+  <script>
+    // for() 중첩문
+    var i,j; // 변수 i 와 j 가 있다.
+
+    for(i=2; i<=9; i++){ // 초기 i는 2를 갖으며, for문을 실행하며 9까지 조건을갖고 
+      document.write("<h1>" + i + "단</h1>");
+      for(j=1;j<=9;j++){ // 초기 j는 1를 갖으며, for문을 실행하며 9까지 조건을갖고 
+        document.write( i + "x"+ j +"=" + i*j + "<br>"); // i * j 를 하여 write 출력
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

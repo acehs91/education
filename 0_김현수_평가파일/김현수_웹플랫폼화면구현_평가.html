@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김현수 웹플랫폼화면 구현 평가</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background: #fff;
+        font-size: 0.8em;
+        line-height: 1.5em;
+        color: #666666;
+        text-align: center;
+    }
+
+    .wrap {
+        position: relative;
+        width: 960px;
+        margin: 0 auto;
+        text-align: center;
+        background: #fff;
+        overflow: hidden;
+    }
+
+
+    .gnb {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 10px 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .gnb li a:hover {
+        color: red;
+    }
+
+
+    .logo {
+        font-family: 'Oswald', sans-serif;
+        font-size: 3em;
+        font-weight: 700;
+        line-height: 150%;
+        color: black;
+        text-transform: uppercase;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .main_img {
+        position: relative;
+        padding: 10px;
+        max-width: 960px;
+        margin: 0 auto;
+        border-radius: 5px;
+        height: 400px;
+        overflow: hidden;
+
+    }
+
+
+    .main_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 5px;
+        border: 10px solid #fff;
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .desc {
+        word-break: keep-all;
+        line-height: 1.8;
+        margin: 20px 0;
+    }
+
+    .form_col {
+        position: relative;
+        border: solid 1px #000;
+        padding: 15px;
+        margin-bottom: 20px
+    }
+
+    .form_col h3 {
+        text-transform: capitalize;
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background: #fff;
+    }
+
+    .form_col label {
+        display: inline-block;
+        text-align: right;
+        margin-right: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        white-space: nowrap;
+        margin: 5px;
+    }
+
+    .form_col textarea {
+        width: 100%;
+        resize: none;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .btn_group {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .btn_group button {
+        padding: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        color: #000;
+    }
+
+    button[type="submit"] {
+        background: darkgray;
+    }
+
+    button[type="reset"] {
+        background: silver;
+    }
+
+    footer {
+        position: relative;
+        background: url(https://cdn.pixabay.com/photo/2020/08/17/13/24/sea-5495381_1280.jpg) center center / cover no-repeat;
+        margin: 20px;
+    }
+
+    footer p {
+        padding: 10px;
+        color: blue;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    footer .copyright {
+        font-size: 14px;
+        color: #fff;
+        max-width: 80%;
+        margin: 0 auto;
+        text-transform: none;
+    }
+</style>
+
+<body>
+
+    <div class="wrap">
+        <!-- logo -->
+        <h1 class="logo">logo</h1>
+        <!-- //logo -->
+
+        <!-- gnb -->
+        <ul class="gnb">
+            <li><a href="#">company</a></li>
+            <li><a href="#">vision</a></li>
+            <li><a href="#">portofolio</a></li>
+            <li><a href="#">request</a></li>
+        </ul>
+        <!-- //gnb -->
+
+        <!-- main_visual -->
+        <div class="main_visual">
+            <div class="main_img">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3" alt="바다 이미지">
+            </div>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quae mollitia harum
+                incidunt praesentium sint rerum expedita perferendis? Rem repellat id deserunt, deleniti dicta incidunt
+                in,
+                ex dolores modi mollitia nisi excepturi natus maiores vero, similique accusamus! Aliquam expedita ea
+                tempora, sunt quod quaerat vel quae facere corrupti, sequi nihil iste, veritatis magnam ad voluptatem
+                cum
+                deserunt? Voluptatibus sed obcaecati porro. Quibusdam nobis aspernatur voluptate repellendus atque
+                accusamus
+                quisquam facilis similique distinctio non porro consectetur nisi deleniti tempore corrupti autem aut
+                voluptas voluptatum in expedita libero facere, odio veniam sint! Vel iure nemo eveniet consequuntur est
+                ipsam hic id quam?
+            </p>
+        </div>
+        <!-- //main_visual -->
+
+
+        <!-- form_content -->
+        <form action="">
+            <div class="form_wrap">
+                <div class="form_col log-in">
+                    <h3>log-in</h3>
+                    <div>
+                        <label for="user_id">id:</label>
+                        <input id="user_id" name="user_id" type="text" placeholder="ID를 입력하세요" autofocus>
+                    </div>
+                    <div>
+                        <label for="user_pw">password</label>
+                        <input id="user_pw" name="user_pw" type="password" placeholder="비밀번호를 입력하세요">
+                    </div>
+                </div>
+                <div class="form_col web-part">
+                    <h3>web-part</h3>
+                    <div class="">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="webpart" value="publishing" title="Web Publishing"
+                                        checked> Web Publishing
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="webpart" title="Web Design" value="design"> Web Design
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="webpart" title="Web Planner" value="planner"> Web Planner
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form_col comment">
+                    <h3>comment</h3>
+                    <textarea cols="50" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="btn_group">
+                <button type="submit">write</button>
+                <button type="reset">reset</button>
+            </div>
+
+        </form>
+        <!-- //form_content -->
+
+        <!-- footer -->
+        <footer>
+            <p>ezen computer academy</p>
+            <p class="copyright">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel labore minus dolor
+                exercitationem, delectus
+                laborum iure ea cum commodi eius?</p>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    </div>
+</body>
+
+</html>

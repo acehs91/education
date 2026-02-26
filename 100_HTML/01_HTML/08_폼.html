@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 폼 기초 : 데이터를 서버로 보냄</title>
+    <style>
+        span {
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <!-- action = 입력받은 폼 데이터를 처리할 서버쪽 프로그램 파일을 지정 | *.jsp, *.php, *.asp 등등 -->
+    <!-- method = 데이터 전송방식 | get, post -->
+    <form action="./data.jsp" method="post">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label for="a_id">아이디 : </label>
+                    <input type="text" id="a_id" size="12">
+                </li>
+                <li>
+                    <label for="a_pw">비밀번호 : </label>
+                    <input type="password" id="a_pw" maxlength="8">
+                </li>
+                <li>
+                    파일명 : <input type="file">
+                </li>
+                <li>
+                    <label for="a_memo">메모</label>
+                    <textarea id="a_memo" cols="60" rows="3"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>필드 유효성 검사</legend>
+            <p>
+                <span>*</span> 표시는 필수항목입니다.
+            </p>
+            <ul>
+                <li>
+                    <label for="c_name"><span>*</span> 이름 : </label>
+                    <input type="text" id="c_name" required autocomplete="off" autofocus>
+                </li>
+                <li>
+                    <label for="c_id"><span>*</span> 아이디 : </label>
+                    <input type="text" id="c_id" required autocomplete="off">
+                </li>
+                <li>
+                    <label for="c_pw"><span>*</span> 비밀번호 : </label>
+                    <input type="password" id="c_pw" required placeholder="비밀번호를 입력해주세요" maxlength="10">
+                </li>
+                <li>
+                    <label for="c_tel"><span>*</span> 전화번호 : </label>
+                    <input type="tel" id="c_tel" required placeholder="01012341111 숫자만 입력">
+                </li>
+                <li>
+                    <label for="c_email"><span>*</span> 이메일 : </label>
+                    <input type="email" id="c_email" required placeholder="id@도메인명">
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>라디오 버튼</legend>
+            <p>
+                이 달에 신청할 과목을 선택하세요(1과목만 가능)
+            </p>
+            <label>
+                <input type="radio" name="subject" value="html" checked>HTML
+            </label>
+            <label>
+                <input type="radio" name="subject" value="css">CSS
+            </label>
+            <label>
+                <input type="radio" name="subject" value="js">javaScript
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>체크박스</legend>
+            <p>
+                정보를 받고 싶은 과목을 선택하세요 (복수선택가능)
+            </p>
+            <label>
+                <input type="checkbox" name="mailing1" value="html">HTML
+            </label>
+            <label>
+                <input type="checkbox" name="mailing2" value="css">CSS
+            </label>
+            <label>
+                <input type="checkbox" name="mailing3" value="js">javaScript
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 HTML5 input type</legend>
+            <p>
+                <label for="c_search">검색 : </label>
+                <input type="search" name="c_search" id="c_search">
+            </p>
+            <p>
+                <label for="c_url">사이트 주소 : </label>
+                <input type="url" name="c_url" id="c_url">
+            </p>
+            <p>
+                <label for="c_number">수량 : </label>
+                <input type="number" name="c_number" id="c_number" value="1" min="1" max="10" step="2">
+            </p>
+            <p>
+                <label for="c_date">날짜선택(년,월,일) : </label>
+                <input type="date" name="c_date" id="c_date">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>select | 여러데이터 나열</legend>
+            <p>
+                <label for="web">웹퍼블리싱</label>
+            </p>
+            <p>
+                여러항목을 선택하고 싶으면, SHIFT+클릭 | CTRL+클릭(단, multiple 속성 코딩시만)
+            </p>
+            <select name="seldata" id="web">
+            <!-- <select name="seldata" id="web" multiple> -->
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">javaScript</option>
+                <option value="jq">jQuery</option>
+                <option value="rwd">Responsive Web</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>optgroup | 여러 데이터 분류</legend>
+            <p>
+                <label for="web2">웹퍼블리싱 디자인 : </label>
+                <select name="seldata2" id="web2">
+                    <optgroup label="웹퍼블리싱">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">javaScript</option>
+                        <option value="jq">jQuery</option>
+                        <option value="rwd">Responsive Web</option>
+                    </optgroup>
+                    <optgroup label="서버프로그래밍">
+                        <option value="java">Java</option>
+                        <option value="oracle">Oracle</option>
+                        <option value="jsp">JSP</option>
+                    </optgroup>                    
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>disabled 속성 | readonly 속성</legend>
+            <ul>
+                <li>
+                    <label for="serial">시리얼 넘버 입력 : </label>
+                    <input type="text" id="serial" placeholder="시리얼 넘버 입력">
+                    <input type="button" value="이전">
+                    <input type="button" value="다음" disabled>
+                </li>
+                <li>
+                    <label for="book">선택한 책 :</label>
+                    <input type="text" id="book" value="웹퍼블리싱" readonly>
+                </li>
+            </ul>
+        </fieldset>
+        <br><br>
+        <!-- 하나의 폼에서 submit버튼은 기본적으로 한개만 있어야 함 -->
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+    </form>
+</body>
+</html>

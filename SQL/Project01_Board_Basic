@@ -1,0 +1,21 @@
+
+/*
+ 프로젝트명 : Project01_Board_Basic
+ 작업명 : JSP 기초 게시판 연습
+ DB 접속 방법 : JDBC cONNECTION 사용
+ 사용 테이블명
+    1. kda_board_users -> 로그인 테이블
+       a. 필드명 : id, password, name ,role
+       b. 필드타입 : 모두 가변형 문자열, 자릿수 28 8 30 5
+       c. 제약사항 : pk, nn, nn, default 'User'
+       d. 더미 데이터 : mc 1111 김명철 Admin
+    2. kda_board_board -> 게시판 테이블
+       a. 필드명 : seq, title, nickname, content, regdate, cnt ,userid
+       b. 필드타입 : 모두 가변형 문자열 | seq,cnt -> number | reqdate -> date ,자릿수 5 200 30 2000 date 5 8
+       c. 제약사항 : pk, nn, nn, nn, defalut sysdate, default 0
+       d. 더미 데이터 : 1 '첫번째 게시물' , '김쌤' , '첫번째 게시물 내용', '2025-11-14', 'gim'
+*/
+
+-- 기존 테이블 지우고 시작
+
+select * from member;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event, 인라인 모델 방식</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/font.css">
+</head>
+<style>
+  ul {
+    display: flex;
+    gap: 30px;
+    width: 500px;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+
+  ul li {
+    flex: 1;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #000;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  #result {
+    border: solid 1px #000;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 10px;
+  }
+</style>
+
+<body>
+  <ul>
+    <li><a href="#" onclick="changeBg('red');">RED</a></li>
+    <li><a href="#" onclick="changeBg('green');">GREEN</a></li>
+    <li><a href="#" onclick="changeBg('blue');">BLUE</a></li>
+  </ul>
+  <div id="result">배경색 출력</div>
+  <script>
+    function changeBg(chColor) {
+      console.log(chColor);
+      var result = document.querySelector("#result");
+      result.style.background = chColor;
+      result.style.fontSize = "24px";
+      result.style.color = "white";
+    }
+  </script>
+</body>
+
+</html>

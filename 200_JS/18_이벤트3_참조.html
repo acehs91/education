@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event 호출 참조</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/font.css">
+</head>
+
+<body>
+  <button id="button">버튼</button>
+</body>
+<script>
+
+  // onload 썼을때 안에 호출할때 
+  window.onload = function () {
+    var btn = document.querySelector("#button");
+    btn.onclick = alt;  // 버튼 클릭시 실행 - 의도와 같음
+    // btn.onclick = alt (); load시 바로실행되서 - 의도와 다름
+  }
+
+  /* #2 이벤트 리스너 작성 */
+  function alt() {
+    alert('준비완료');
+  }
+
+</script>
+
+</html>

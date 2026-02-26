@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜정보객체</title>
+    <script>
+        // 1. 오늘 날짜
+        var now = new Date();
+
+        // 2. 현재 연도
+        var nowYear = now.getFullYear();
+
+        // 3. 디데이 (12월 25일 = month는 0부터 시작하므로 11이 12월)
+        var dDay = new Date(nowYear, 11, 25);
+
+        // 4. 디데이 - 현재날짜 (밀리세컨 차이)
+        var theDay = dDay.getTime() - now.getTime();
+
+        // 5. 일수로 변환 (1일 = 86,400,000 ms)
+        var result = Math.ceil(theDay / 86400000);
+
+        document.write("크리스마스까지 D-" + result + "일 남았습니다!");
+    </script>
+</head>
+
+<body>
+    <p>1초 = 1000 밀리세컨</p>
+    <p>60초 = 60000 밀리세컨</p>
+    <p>1시간 = 60 * 60000 = 3600000 밀리세컨</p>
+    <p>1일 = 24 * 3600000 = 86400000 밀리세컨</p>
+</body>
+
+</html>

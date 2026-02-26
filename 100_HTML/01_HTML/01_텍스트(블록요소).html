@@ -1,0 +1,58 @@
+<!-- 주석문 : 참고문구 | 브라우저에는 표시되지 않는 내용, 개발자들만 볼수 있음 -->
+<!-- DOCTYPE : 웹문서의 유형을 지정하는 선언문 = html5의 doctype -->
+<!DOCTYPE html>
+<!-- lang="ko" | 문서에서 사용할 언어를 지정 
+검색사이트에서 특정언어로 제한하여 검색할 때 필요
+(화면낭독기=웹접근성)에서 해당 언어에 맞는 억양, 발음, 목소리등을 다르게 읽어줌  -->
+<html lang="ko">
+<head>
+    <!-- 인코딩 방식 = 영미권 이외의 국가에서 자국 문자 정상적으로 나오도록 할때 사용 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 반응형 웹 사용시 있어야 되는 meta 속성 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트관련요소(블록레벨요소)</title>
+</head>
+<body>
+    <!-- hn태그 : 제목 표시하기 n = 1~6 -->
+    <h1>KD 아카데미 노원</h1>
+    <h2>KD 아카데미 노원</h2>
+    <h3>KD 아카데미 노원</h3>
+    <h4>KD 아카데미 노원</h4>
+    <h5>KD 아카데미 노원</h5>
+    <h6>KD 아카데미 노원</h6>
+    <!-- p태그 : paragraph = 단락만들기 -->
+    <p>
+        HTML, CSS, javaScript, jQuery
+    </p>
+    <p>
+        Java, JSP, Servlet, SQL, Oracle, Spring
+    </p>
+    <!-- hr태그 : 분위기 전환을 위한 수평줄 넣기 -->
+    <hr>
+    <!-- blockquote태그 : 인용문 | 들여쓰기가 자동으로 적용 -->
+    <blockquote>
+        성이시돌목장은 제주시에 있는 목장이다.(출처:향통문화전자사전)
+    </blockquote>
+
+    <h2>입력하는 그대로 화면에 표시하는 요소 pre</h2>
+    <pre>
+        function ezen() {
+            document.getElementById("p");
+        }
+    </pre>
+
+    <h3>엔티티코드 : https://entitycode.com</h3>
+    <p>
+        YOU & ME <br>
+        YOU &amp; ME
+    </p>
+    <p>
+        You &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me
+    </p>
+    <p>
+        &copy; Copyright All Rights Reserved
+    </p>
+    KD 컴퓨터 아카데미 노원
+</body>
+</html>

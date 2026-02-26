@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+    <script>
+
+        var today = new Date();
+        var thisYear = today.getFullYear(); //2025
+        var thisMonth = today.getMonth() + 1; // 9월
+        var user = prompt("이름을 작성해주세요.", "kim");
+        var reName = user.toUpperCase();
+        var str = "Hello JavaScript";
+
+        var lang = navigator.language;
+        var href = location.href;
+
+
+        document.write("현재 연도는" + thisYear + "년이고, 현재 월은 " + thisMonth + "월입니다.<br>");
+        document.write("입력받은 이름은 " + reName + " 입니다.<br>");
+        document.write("문자열에서 잘라낸 부분은 " + str.slice(10, 16) + " 입니다.<br>");
+        document.write("브라우저 사용언어 : " + lang + " 입니다.<br>");
+        document.write("현재 주소는 : " + href + " 입니다.<br>");
+
+    </script>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>

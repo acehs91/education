@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 선택자</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /* 1. 전체 선택자 */
+            $("*").css("color","red");
+            /* 2. 요소명 선택자 */
+            $('h3').css('color','green');
+            /* 3. 클래스 선택자 */
+            $('.author').css('color','blue');
+            /* 4. 아이디 선택자 */
+            $('#txt1').css('color',"black");
+        });
+    </script>
+</head>
+<body>
+    <h3 id="txt1">
+        변명 중에서도 가장 어리석고 못난 변명은
+    </h3>
+    <h3 id="txt2">
+        <span>&quot;시간이 없어서 라고&quot;</span> 하는 변명입니다.
+    </h3>
+    <h4 class="author">
+        By Edison
+    </h4>
+</body>
+</html>

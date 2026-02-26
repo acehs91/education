@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if문 실습</title>
+  <script>
+    /* 실습1. (프롬프트) 나이를 입력받아,
+     (경고창) 만약 , 40세 이상이면 "건강검진대상" , 아니면 "건강검진대상아님"
+    */
+
+    /*
+       let age = prompt("나이를 입력하세요" ,33);
+        if (age >= 40) {
+          alert("건강검진대상");
+        } else {
+          alert("건강검진대상아님");
+        }
+    */
+
+
+    /* 실습2. (프롬프트) 나이를 입력받아,
+     (경고창) 만약 , 20세 이상이고 40세 미만이면 "서류심사통과" , 아니면 "서류심사보류"
+    */
+
+    /*
+      let age2 = prompt("나이를 입력하세요", 33);
+        if (age2 >= 20 && age2 < 40) {
+          alert("서류심사통과");
+        } else {
+          alert("서류심사보류");
+        }
+     */
+
+    /* 실습3. (프롬프트) ID를 입력받아,
+     (브라우저) 만약, ID가 입력되었으면, "???님 반갑습니다!!",
+     (경고창) ID를 입력하지않았으면, "ID를 입력하세요"
+    */
+
+    /*
+     let userId = prompt ("아이디를 입력하세요.");
+    
+      if(userId) {
+        document.write(userId + "님 반갑습니다!!");
+      } else {
+        alert("ID를 입력하세요");
+        location.reload();  // 페이지 새로고침
+      } */
+
+
+    /* 실습4. (프롬프트) 국어,영어 ,수학 각각의 점수를 입력받아,
+    (경고창) 만약, 3과목 평균이 80점 이상이고, 각각 과목의 점수가 60점 이상이면 "시험통과",
+    (경고창) 아니면 "재시험"
+     */
+
+    let kor = Number(prompt("국어점수를 입력하세요", 80));
+    let eng = Number(prompt("영어점수를 입력하세요", 80));
+    let math = Number(prompt("수학점수를 입력하세요", 78));
+
+    let scores = [kor, eng, math]; // 총 과목
+
+    if (scores.every(i => i >= 60)) {
+      alert("시험통과");
+    } else {
+      alert("재시험");
+      location.reload(); // 페이지 새로고침
+    }
+    
+
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

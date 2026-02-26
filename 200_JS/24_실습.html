@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>24_실습</title>
+</head>
+<style>
+ #container {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+ }
+
+ #container img {
+  width: 100%;
+ }
+</style>
+
+<script>
+
+  //4번째 문제
+  window.onload = function () {
+   var pic = document.getElementById('boy');
+   console.log(pic);
+
+   function changeImg() {
+    pic.src = "./images/girl.png";
+    pic.alt = "소녀이미지";
+   }
+
+   function originPic() {
+    pic.src = "./images/boy.png";
+    pic.alt = "소년이미지";
+   }
+   pic.addEventListener('mouseenter', changeImg);
+   pic.addEventListener('mouseleave', originPic);
+  };
+</script>
+
+<body>
+ <div id="container">
+  <img id="boy" src="./images/boy.png" alt="소년이미지">
+ </div>
+
+</body>
+
+</html>

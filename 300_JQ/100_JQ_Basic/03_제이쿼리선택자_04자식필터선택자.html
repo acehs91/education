@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>제이쿼리, 자식필터 선택자</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nations tbody tr:nth-child(even)").css({ background: 'lightgray' }); //짝수
+            $("#nations tbody tr:nth-child(odd)").css({ background: 'gray' }); // 홀수 
+
+            $("#nations tbody tr:nth-child(3)").css({ background: 'orange' }); //3번째
+            $("#nations tbody tr:first-child").css({ background: 'black', color: 'white' }); //첫번째
+            $("#nations tbody tr:last-child").css({ background: 'black', color: 'white' }); //마지막
+
+            $("#nations2 tbody tr:nth-child(3n)").css({ background: 'orange' }); //3의배수
+            $("#nations2 tbody tr:nth-child(3n-1)").css({ background: 'gray' }); //3의전 배수
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="card-body">
+        <table class="table" id="nations">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>국가명</th>
+                    <th>수도</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>미국</td>
+                <td>워싱턴DC</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>프랑스</td>
+                <td>파리</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>영국</td>
+                <td>런던</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>중국</td>
+                <td>베이징</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>태국</td>
+                <td>방콕</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>모로코</td>
+                <td>라바트</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>라오스</td>
+                <td>비엔티안</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>베트남</td>
+                <td>하노이</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>피지</td>
+                <td>수바</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>자메이카</td>
+                <td>킹스턴</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>나미비아</td>
+                <td>빈트후크</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>멕시코</td>
+                <td>멕시코시티</td>
+            </tr>
+        </table>
+        <br><br><br>
+
+        <table class="table" id="nations2">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>국가명</th>
+                    <th>수도</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>미국</td>
+                <td>워싱턴DC</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>프랑스</td>
+                <td>파리</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>영국</td>
+                <td>런던</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>중국</td>
+                <td>베이징</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>태국</td>
+                <td>방콕</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>모로코</td>
+                <td>라바트</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>라오스</td>
+                <td>비엔티안</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>베트남</td>
+                <td>하노이</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>피지</td>
+                <td>수바</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>자메이카</td>
+                <td>킹스턴</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>나미비아</td>
+                <td>빈트후크</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>멕시코</td>
+                <td>멕시코시티</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 테이블 실습</title>
+    <style>
+        table, th, td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        th, td {
+            width: 150px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>표만들기</h1>
+    <p id="summary">
+        낭독기에 읽어줄 내용 연동
+    </p>
+    <table aria-describedby="summary">
+        <caption>
+            <p>공연요금표</p>
+        </caption>
+        <tr>
+            <th>공연요금표</th>
+            <th>공연요금표</th>
+            <th>공연요금표</th>
+        </tr>
+        <tr>
+            <th>구분</th>
+            <th>S석</th>
+            <th>VIP</th>
+        </tr>
+        <tr>
+            <th>성인</th>
+            <td>30,000원</td>
+            <td>40,000원</td>
+        </tr>
+        <tr>
+            <th>청소년</th>
+            <td>20,000원</td>
+            <td>30,000원</td>
+        </tr>
+        <tr>
+            <th>소인</th>
+            <td colspan="2">미취학한 아동 일반 요금의 50%</td>
+        </tr>
+        <tr>
+            <th rowspan="2">공연시간</th>
+            <td>1회</td>
+            <td>13:00 ~ 15:00</td>
+        </tr>
+        <tr>
+            <td>2회</td>
+            <td>16:00 ~ 18:00</td>
+        </tr>
+    </table>
+</body>
+</html>

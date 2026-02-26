@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 실습</title>
+    <style>
+        strong {
+            color: red;
+        }
+    </style>
+    <script>
+        /* 실습1.(프롬프트)비밀번호를 입력받아,
+        (경고창)8자 미만이면 "8자 이상으로 다시 입력하시오"
+        (브라우저)8자 이상이면 "비밀번호 ???자가 입력되었습니다."
+        소스캡쳐,캡쳐 넘버링 */
+
+
+        var str = prompt("비밀번호 입력", 11111111);
+        console.log(str.length);
+
+        if (str.length < 8) {
+            alert("다시입력해주세요");
+            location.reload();
+        } else {
+            document.write("비밀번호<strong>" + str.length + "</strong>자가 입력되었습니다.<br>")
+        }
+
+
+        /*  실습2.
+            (프롬프트) 이름을 영문소문자로 입력받아, 대문자로 치환
+            (브라우저)"입력한 이름은 ??? 입니다.
+        */
+
+        var name = prompt("소문자 입력", "khs");
+        var upper = name.toUpperCase();
+        console.log(upper);
+
+        document.write("소문자로 받아 대문자로 바꾼 이름은<strong>" + upper + "</strong>입니다<br>");
+
+        /* 실습3. (프롬프트)영문 이름 입력받아, 대문자입력시 소문자로 치환
+            (도큐먼트) 입력받은 이름은 ??? 입니다.
+            (프롬프트) 전화번호 입력받아, 끝 네자리를 "****"로 치환 = substr(),replace()
+            (도큐먼트) 전화번호는 0101234**** 입니다.
+            캡쳐 넘버링 */
+
+
+        var name = prompt("영문 이름 입력", "KIMHYUNSU");
+        var lowerName = name.toLowerCase(); // 대문자를 소문자로
+        document.write("입력받은 이름은 <strong>" + lowerName + "</strong> 입니다.<br>");
+
+
+        var phone = prompt("전화번호 입력", "01012345678");
+        var hiddenphone = phone.substr(0, phone.length - 4) + "****"; //받은 번호 뒤에서 4칸
+
+        document.write("입력받은 전화번호는 <strong>" + hiddenphone + "</strong> 입니다.<br>");
+
+        //Not a Number 숫자가 아니다.
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

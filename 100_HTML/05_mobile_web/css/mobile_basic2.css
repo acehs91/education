@@ -1,0 +1,87 @@
+@charset "utf-8";
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* 공통 클래스 */
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+}
+/* Header */
+header {
+    padding: 16px 4px;
+    /* 위치 기준값 */
+    position: relative;
+}
+header h1 {
+    font-size: 1.25rem;
+    line-height: 2;
+    color: #222;
+    font-weight: 600;
+}
+header ul {
+    margin: 20px 0 10px;
+}
+header ul li {
+    margin: 10px 0;
+}
+header ul li a {
+    color: #555;
+}
+/* GNB 토글 효과 */
+
+#c_checkbox {
+    display: none;
+}
+
+/* 로딩시 GNB메뉴 가리기 */
+#c_checkbox:checked+nav {
+    display: none;
+}
+
+/* Content1 */
+#main_content {
+    background: #00afa0;
+    padding: 40px 15px 30px;
+}
+#main_content h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#main_content p {
+    color: #fff;
+    text-align: center;
+}
+
+/* Content2 */
+#sub_content {
+    padding-top: 30px;
+}
+#sub_content h2 {
+    color: #171616;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#sub_content p {
+    color: #555;
+}
+#sub_content img {
+    width: 94%;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Footer */
+#footer {
+    padding-top: 40px;
+}
+#footer footer {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 40px;
+    text-align: center;
+    background: #323232;
+}

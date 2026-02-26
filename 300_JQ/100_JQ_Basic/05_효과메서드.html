@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <title>제이쿼리, 효과 메서드 + 기본 이벤트</title>
+    <style>
+      #wrap {
+        width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      button {
+        cursor: pointer;
+      }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        /* show() / hide() / toggle() */
+        $("#btn1").click(function () {
+          $(".box1").hide();
+        });
+        $("#btn2").click(function () {
+          $(".box1").show();
+        });
+        $("#btn3").click(function () {
+          $(".box1").toggle();
+        });
+
+        $("#btn4").click(function () {
+          $(this).parent().next().slideUp();
+        });
+        $("#btn5").click(function () {
+          $(this).parent().next().slideDown();
+        });
+        $("#btn6").click(function () {
+          $(this).parent().next().slideToggle();
+        });
+
+        $("#btn7").click(function () {
+          $(this).parent().next().fadeOut();
+        });
+        $("#btn8").click(function () {
+          $(this).parent().next().fadeIn();
+        });
+        $("#btn9").click(function () {
+          $(this).parent().next().fadeToggle();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <h1>제이쿼리 효과</h1>
+      <p>
+        제이쿼리에서 화면전환, 슬라이드 다운과 업효과 등 <br />
+        다양한 효과 메서드를 제공 <br />
+        제이쿼리 코어 파일 버전에 따라 동작이 안될 경우도 있음
+      </p>
+
+      <h2>show / hide / toggle 효과</h2>
+      <div>
+        <button id="btn1">HIDE</button>
+        <button id="btn2">SHOW</button>
+        <button id="btn3">TOGGLE</button>
+      </div>
+      <p class="box1">
+        DOM선택요소를 숨기거나 노출하고 싶을 경우에 사용<br />
+        형식 : hide('시간') | show('시간') | toggle('시간') | <br />
+        매개변수 '시간' = 'fast' 200, 'nomal' 400, 'slow' 600, 밀리세컨 입력
+        가능
+      </p>
+
+      <h2>slideDown / slideUp / slideToggle 효과</h2>
+      <p>
+        <button id="btn4">slideDown</button>
+        <button id="btn5">slideUp</button>
+        <button id="btn6">slideToggle</button>
+      </p>
+      <p class="box2">
+        slideUp은 DOM선택요소를 위로 미끄러지듯 말아 올리면서 숨김<br />
+        slideDown DOM선택요소를 아래로 미끄러지듯 말아 내리면서 노출시킴<br />
+        형식 : slideDown('시간') | slideUp('시간') | slideToggle('시간') |
+        <br />
+        매개변수 '시간' = 'fast' 200, 'nomal' 400, 'slow' 600, 밀리세컨 입력
+        가능
+      </p>
+
+      <h2>fadeIn / fadeOut / fadeToggle 효과</h2>
+      <p>
+        <button id="btn7">fadeOut</button>
+        <button id="btn8">fadeIn</button>
+        <button id="btn9">fadeToggle</button>
+      </p>
+      <p class="box3">
+        fadeOut DOM선택요소를 천천히 사라지게 함<br />
+        fadeIn은 DOM선택요소를 천천히 나타나게 함<br />
+        형식 : fadeIn('시간') | fadeOut('시간') | fadeToggle('시간') | <br />
+        매개변수 '시간' = 'fast' 200, 'nomal' 400, 'slow' 600, 밀리세컨 입력
+        가능
+      </p>
+    </div>
+  </body>
+</html>

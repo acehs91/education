@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자 ::가상요소</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            width: 480px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        #wrap h1 {
+            font-size: 2rem;
+        }
+        #wrap ul li {
+            margin: 20px;
+        }
+        #wrap ul li.new::after {
+            content: "NEW!!";
+            display: inline;
+            font-size: 9px;
+            color: #fff;
+            background: #f00;
+            border-radius: 2px;
+            padding: 2px 4px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제품목록</h1>
+        <ul>
+            <li class="new">제품A</li>
+            <li>제품B</li>
+            <li>제품C</li>
+            <li class="new">제품D</li>
+        </ul>
+        <h2 class="new">헤딩코딩</h2>
+    </div>
+</body>
+</html>

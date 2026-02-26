@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>제이쿼리, 문서객체제작</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /* 1.remove() : 선택 DOM 객체 태그 제거 */
+
+            $('h3').eq(0).remove(); //첫번째 h3 선택 삭제, 같은 삭제 기능 1
+            //$('h3').first.remove();  // 같은 삭제 기능 2
+            //$('h3:first').filter(0).remove(); //같은 삭제 기능 3
+
+            /* 2.empty() : 자식노드를 제거 */
+            $('div').empty(); // empty 비어있는 - ex) 쓰레기통은 남고 쓰레기는 node는 버리는
+
+            /* 
+                3. $() = jQuery() // 
+                a. DOM객체 선택
+                b. 태그 생성 : 매게변수로 HTML요소 문자열로 DOM객체 생성 가능
+                    b-1. appendTo() : 매게변수의 맨 마지막 자식요소로 태그 생성
+            */
+            $('<h2>Dead Poet Society</h2>').appendTo('body').css({ color: 'purple' });
+            $('<img>').attr({ src: './images/img1.jpg', alt: 'test', width: '300', height: '300' }).appendTo('body');
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Carpe Dim!!</h1>
+        <h2>현재를 즐겨라</h2>
+    </div>
+
+    <h3>나의 금기어</h3> <!-- << 여기 해당 부분이 jquery로 인해 삭제됨 -->
+
+    <h3>
+        &quot;언젠가&quot; &quot;아마도&quot; &quot;만약에&quot;
+    </h3>
+    <h4>
+        Written By 파울로 코엘료
+    </h4>
+
+    <h5>ONE</h5>
+    <h5>TOW</h5>
+    <h6>THREE</h6>
+    <h6>FOUR</h6>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 선택자</title>
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      /*1. 자식선택자 */
+      // $('ul>li').css('color','blue');
+      // $('ul>li').css('list-style','none');
+
+      //객체 사용하여 같은 결과가 나오도록 코딩 | 소스캡쳐, 넘버링
+      $('ul>li').css({color:'blue',listStyle:'none'});
+
+      /*2. 부모 선택자 */
+      $('li').parent('ul').css({fontWeight:'bold'}); // 'ul' 지칭
+
+      /*3. 형제 선택자 */
+      $('ul').siblings('h3').css({'background':'purple','font-size':36});
+    });
+  </script>
+</head>
+
+<body>
+  <ul>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+  <h3>
+    jQuery Selector!!
+  </h3>
+</body>
+
+</html>

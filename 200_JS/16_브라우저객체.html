@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM, 브라우저 객체</title>
+    <script>
+        /* 1. location 객체 = 브라우저 주소창과 연관 */
+        var infoBrower = "현재 주소는 : " + location.href + " 입니다.<br>";
+        document.write(infoBrower);
+        infoBrower = "현재 사용하는 프로토콜 : " + location.protocol + " 입니다.<br>";
+        document.write(infoBrower);
+        infoBrower = "현재 사용하는 포트번호 : " + location.host + " 입니다.<br>";
+        document.write(infoBrower);
+        
+        /* 2. navigator 객체 = 브라우저 정보 */
+        var infoBrower2 = "";
+        infoBrower2 = "브라우저 코드명 : " + navigator.appCodeName + "<br>";
+        document.write(infoBrower2);
+        infoBrower2 = "브라우저 이름 : " + navigator.appName + "<br>";
+        document.write(infoBrower2);
+        infoBrower2 = "브라우저 버전 : " + navigator.appVersion + "<br>";
+        document.write(infoBrower2);
+        infoBrower2 = "브라우저 사용언어 : " + navigator.language + "<br>";
+        document.write(infoBrower2);
+        infoBrower2 = "브라우저 엔진이름 : " + navigator.product + "<br>";
+        document.write(infoBrower2);
+        infoBrower2 = "브라우저 환경 : " + navigator.platform + "<br>";
+        document.write(infoBrower2);
+
+        // (알기)
+        infoBrower2 = "브라우저 환경 : " + navigator.userAgent + "<br>";
+        document.write(infoBrower2);
+
+        // infoBrowserTotal 변수명 한번만 사용하여 위의 정보 => document.write(infoBrowserTotal);
+        // (도큐먼트)에 나오도록 코딩 | 소스캡쳐, 캡쳐 넘버링
+        var infoBrowserTotal = "";
+        infoBrowserTotal += "브라우저 코드명 : " + navigator.appCodeName + "<br>";
+        infoBrowserTotal += "브라우저 이름 : " + navigator.appName + "<br>";
+        infoBrowserTotal += "브라우저 버전 : " + navigator.appVersion + "<br>";
+        infoBrowserTotal += "브라우저 사용언어 : " + navigator.language + "<br>";
+        infoBrowserTotal += "브라우저 엔진이름 : " + navigator.product + "<br>";
+        infoBrowserTotal += "브라우저 환경 : " + navigator.platform + "<br>";
+        infoBrowserTotal += "브라우저 환경 : " + navigator.userAgent + "<br>";
+        document.write(infoBrowserTotal);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

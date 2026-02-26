@@ -1,0 +1,245 @@
+@charset "utf-8";
+html {
+    font-size: 62.5%;
+}
+/* Header */
+header {
+    height: 44px;
+    background: #323232;
+    padding: 0 14px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+/* Hamberger */
+.ham {
+    width: 16px;
+    height: 44px;
+    padding: 20px 0 18px;
+}
+.ham span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #999;
+}
+.ham span:nth-child(1) {
+    margin-bottom: 4px;
+}
+/* Hamberger 메뉴 효과 */
+input[id="menuicon"] {
+    display: none;
+}
+input[id="menuicon"]+label {
+    display: block;
+    cursor: pointer;
+    width: 16px;
+    height: 44px;
+    padding: 20px 0 18px;
+    position: relative;
+    z-index: 1001;
+}
+input[id="menuicon"]+label span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #999;
+    position: absolute;
+    z-index: 1001;
+    transition: all 0.3s;
+}
+input[id="menuicon"]+label span:nth-child(1) {
+    top: 40%;
+}
+input[id="menuicon"]+label span:nth-child(2) {
+    bottom: 40%;
+}
+/* 클릭시 X자 만들기 */
+input[id="menuicon"]:checked +label>span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked +label>span:nth-child(2) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* Mobile GNB */
+.mobile_gnb {
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 44px;
+    z-index: 100;
+}
+.mobile_gnb .gnb {
+    width: 98%;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin: 0 auto;
+}
+.mobile_gnb .gnb li {
+    width: 100%;
+    font-size: 1.4rem;
+    color: #c3c3c3;
+    font-weight: 500;
+    padding: 12px 0;
+}
+.mobile_gnb .gnb li:first-child {
+    padding: 14px 0;
+    border-bottom: 1px solid #424242;
+}
+.mobile_gnb .gnb li input {
+    width: 100%;
+    height: 30px;
+    display: inline-block;
+    background: #1e1c1f;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 6px;
+    color: #606164;
+}
+input::placeholder {
+    color: #606164;
+}
+.mobile_gnb .gnb li:first-child ~ li {
+    width: 90%;
+    padding: 12px 0;
+    border-bottom: 1px solid #424242;
+    margin: 0 auto;
+}
+/* 검색아이콘 배경이미지 */
+.mobile_gnb .gnb li input {
+    background-image: url(../images/magnity2.png);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 96%;
+    cursor: pointer;
+}
+/* Bag */
+.bag {
+    width: 16px;
+    height: 44px;
+}
+
+/* 햄버거 메뉴 클릭시 GNB메뉴 슬라이딩 효과 */
+nav[class="mobile_gnb"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    top: 44px;
+    z-index: 100;
+    transition: all 0.3s;
+}
+input[id="menuicon"]:checked +label+nav {
+    left: 0;
+}
+
+/* Contents */
+/* Notice */
+.notice {
+    height: 56px;
+    line-height: 1.4;
+    background: #f5f5f7;
+    padding: 13px 0;
+}
+.notice h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+.notice h4 span {
+    color: #3b70ca;
+    font-weight: 700;
+}
+
+/* Content */
+/* Content 공통 CSS */
+.common_content h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+.common_content h3 {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #2e2e30;
+    margin: 12px 0 16px;
+}
+.common_content p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #8f8f94;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+.common_content button {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #3b70ca;
+    margin: 0 14px;
+}
+.common_content button::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-left: 4px;
+}
+
+/* a. iPhone16 Section */
+.iphone16 {
+    height: 456px;
+    background-image: url(../images/iphone_12bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 150%;
+    text-align: center;
+    padding: 36px 0;
+    background-color: rgb(251,251,253);
+}
+
+/* b. iPhone16 Pro Section */
+.iphone16pro {
+    height: 456px;
+    background: url(../images/iphone_12_pro.jpeg) no-repeat center top;
+    background-size: 150%;
+    text-align: center;
+    padding: 36px 0;
+    background-color: #000;
+    margin-bottom: 12px;
+}
+.iphone16pro h2 {
+    color: #fff;
+}
+.iphone16pro h3 {
+    color: #f5f5f7;
+}
+.iphone16pro p {
+    color: #86868b;
+}
+
+/* c. iPad Pro Section */
+.ipadpro {
+    height: 456px;
+    background: url(../images/ipad_pro.png) no-repeat center bottom;
+    background-size: 150%;
+    text-align: center;
+    padding: 36px 0;
+    background-color: #000;
+    margin-bottom: 12px;
+}
+.ipadpro h2 {
+    color: #fff;
+}
+.ipadpro h3 {
+    color: #f5f5f7;
+}
+.ipadpro p {
+    color: #86868b;
+}

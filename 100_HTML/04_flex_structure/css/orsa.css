@@ -1,0 +1,120 @@
+@charset "utf-8";
+body {
+    font: 13px 'Noto Sans KR', sans-serif;
+    background-color: #aaa;
+}
+#wrap {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+/* Header */
+header {
+    background-color: #fa0;
+    color: #fff;
+    text-align: center;
+}
+header h1 {
+    font-size: 800%;
+    font-size: 700;
+}
+header h1 span {
+    font-size: 20px;
+    /* (20/16) = 1.25 */
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 4px;
+    display: block;
+}
+header p {
+    font-size: 12px;
+    /* (12/16) = 0.75 */
+    font-size: 0.75rem;
+    background-color: #ccc;
+    color: #333;
+    padding: 5px;
+}
+header p span {
+    color: blue;
+    font-weight: 700;
+}
+/* Contents */
+#containter {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+/* GNB Menu */
+#containter .sidemenu {
+    width: 200px;
+    background-color: #fff;
+}
+#containter .sidemenu dt {
+    font: bold 1.3rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+    background-color: #900;
+}
+#containter .sidemenu dd a {
+    color: #000;
+    border-bottom: 1px dashed #000;
+}
+#containter .sidemenu dd a:hover {
+    border-bottom: 1px solid #900;
+}
+/* Contents */
+#containter .content {
+    width: 400px;
+    background-color: #ddd;
+    color: #123456;
+}
+#containter .content dt a {
+    font: bold 1.3rem 'Noto Sans KR', sans-serif;
+    color: #ddd;
+    padding: 5px;
+    background-color: #123456;
+    display: block;
+}
+#containter .content dt+dd {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+/* Contents2 */
+#containter .aside {
+    width: 200px;
+}
+#containter .aside dt {
+    font: bold 1.2rem 'Noto Sans KR', sans-serif;
+}
+#containter .aside .all {
+    text-decoration: underline;
+}
+#containter .aside .love {
+    color: #fa0;
+    text-decoration: underline;
+}
+#containter .aside strong {
+    color: #333;
+}
+#containter .aside dd a {
+    color: #000;
+}
+#containter .aside span {
+    display: block;
+}
+/* Footer */
+footer p {
+    font: italic 0.75rem 'Noto Sans KR', sans-serif;
+    color: #eee;
+    padding: 10px;
+    background-color: #123456;
+    text-align: center;
+}
+footer p a {
+    color: #900;
+}
+
+/* 추가 dt, dd */
+dt, dd {
+    padding: 10px;
+}

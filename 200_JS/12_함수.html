@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <title>function, 함수 (캐치볼)</title>
+  <script>
+    /* 1-1. 익명 함수 만들기 */
+    // var count = 0;
+    // var noName = function () {
+    //   count++;
+    //   document.write("익명함수 : " + count + "<br>");
+    // }
+
+
+    /* 1-2. 선언적 함수 만들기 */
+    // function pub() {
+    //       count++;
+    //       document.write("선언적 함수 : " + count + "<br>");
+    // }   
+    // pub();
+
+
+    /* 
+         실습1. (익명함수)
+         (기능) (프롬포트) 숫자를 받아,
+         입력받은 숫자에 + 10을 한 결과값을 반환하는 함수 제작
+    */
+
+    var user = Number(prompt("숫자를 입력하세요", 1)); //초기값 1
+    var add = function (num) {
+      return num + 10;  // 입력값 + 10 반환
+    }
+    alert("결과:" + add(user));
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

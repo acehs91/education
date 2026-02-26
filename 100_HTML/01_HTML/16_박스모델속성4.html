@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model : 구글 웹폰트 박스실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            background-color: #222;
+        }
+        #wrap {
+            width: 640px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #ccc;
+        }
+        #wrap div {
+            width: 160px;
+            height: 160px;
+            line-height: 80px;
+            display: inline-block;
+        }
+        .box1 {
+            background-color: yellowgreen;
+        }
+        .box2 {
+            background-color: darkblue;
+        }
+        .box3 {
+            background-color: blueviolet;
+        }
+        .box4 {
+            background-color: salmon;
+        }
+        .box5 {
+            background-color: aqua;
+        }
+        .box6 {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box1">
+            <h2 class="oswald">OSWALD</h2>
+            <p class="monoton">MONOTON</p>
+        </div>
+        <div class="box2">
+            <h2 class="notosanskr">노토산스케이알</h2>
+            <p class="nanumpenscript">나눔펜스크립트</p>
+        </div>
+        <div class="box3">
+            <h2 class="play">PLAY</h2>
+            <p class="titillium">TITLIUM</p>
+        </div>
+        <div class="box4">
+            <h2 class="open">OPEN</h2>
+            <p class="nanumgothic">나눔고딕</p>
+        </div>
+        <div class="box5">
+            <h2 class="droid">DROID</h2>
+            <p class="droid_serif">DROID SERIF</p>
+        </div>
+        <div class="box6">
+            <h2 class="gamjaflower">감자플라워</h2>
+            <p class="nanumbrushscript">나눔브러쉬스크립트</p>
+        </div>
+    </div>
+</body>
+</html>

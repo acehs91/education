@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML</title>
+</head>
+<script>
+  //DOM객체 먼저 로드후 스크립트 실행하라
+  window.onload = function () {
+
+    var out = "<ul>";
+    out += "<li>내용1</li>";
+    out += "<li>내용2</li>";
+    out += "<li>내용3</li>";
+    out += "</ul>";
+
+    document.querySelector("#inner").innerHTML = out;
+  }
+</script>
+
+<body>
+  <div id="inner">
+
+  </div>
+
+</body>
+
+
+</html>

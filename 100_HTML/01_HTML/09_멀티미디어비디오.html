@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어 비디오</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            width: 640px;
+            margin: 0 auto;
+        }
+        video {
+            width: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>비디오 파일 재생하기</h1>
+        <figure>
+            <figcaption>첫번째 영상</figcaption>
+            <video muted autoplay loop controls>
+                <source src="./media/sea.mp4" type="video/mp4">
+            </video>
+        </figure>
+        <figure>
+            <figcaption>두번째 영상</figcaption>
+            <video muted autoplay>
+                <source src="./media/nimo.mp4" type="video/mp4">
+            </video>
+        </figure>
+        <h2>유튜브 불러오기</h2>
+        <iframe src="https://www.youtube.com/embed/9H6rF9xO1N8" title="ㅣ2019 스팅어ㅣ 그녀의 아버지.Full ver" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

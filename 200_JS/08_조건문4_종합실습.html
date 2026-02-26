@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건문 종합실습</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Oswald|Monoton|Play|Titillium+Web|Open+Sans|Roboto+Condensed');
+
+    body {
+      background: #1e2d67;
+      color: #fff;
+    }
+
+    .flex {
+      font-family: 'Oswald', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0);
+    }
+
+    .box {
+      background: blue;
+
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const wrap = document.getElementById("wrap");
+    /* A. 삼항조건연산자 */
+
+    /*
+      실습1. (프롬프트)이름,신장,몸무게를 입력받아,
+      적정체중이 아니면, ???님 건강을 위해 체중관리 요망
+      적정체중이면, ???님 건강관리 잘 하셨네요
+      적정체중 식 = 키 - 100*0.9
+      (브라우저출력)
+    */
+
+    let name = prompt("이름이 무엇입니까?", "김현수");
+    let height = Number(prompt("키는 몇입니까?", "180"));
+    let weight = Number(prompt("몸무게는 몇 입니까?", "78"));
+
+    let normalWeight = (height - 100) * 0.9;
+    console.log("적정 몸무게:", normalWeight);
+
+    if (weight === normalWeight) {
+      document.write("<h1 style='color:green'>" + name + "님, 건강관리 잘 하셨네요! :)</h1>");
+    } else {
+      document.write("<h1 style='color:red'>" + name + "님, 건강을 위해 체중 관리 요망 :( </h1>");
+    }
+
+    document.write("<p>현재 몸무게: " + weight + " kg</p>");
+    document.write("<p>적정 몸무게: " + normalWeight + " kg</p>");
+
+    /*
+      실습2.
+      (프롬프트)1월급여, 2월급여, 3월급여를 입력받아,
+      3개월 평균급여가 1000이상이면, 고소득자
+      1000이하면, 평균임금자
+      (브라우저출력)
+    */
+
+    //초기값
+    let totalSalary = 0;
+    // 조건 + 증감식
+    for (let i = 1; i <= 3; i++) {
+      totalSalary += Number(prompt(`${i}월 급여를 입력하세요:`, 500));
+    }
+    // 결과 = 평균 급여 / 3
+    totalSalary = totalSalary / 3;
+
+    if (totalSalary >= 1000) {
+      document.write("<h2>" + name + "님의 3개월 평균 급여는:" + totalSalary + "이며,</h2><span><br> 고소득자 입니다</span><br>");
+    } else {
+      document.write("<h2>" + name + "님의 3개월 평균 급여는:" + totalSalary + "이며,</h2><br><span> 평균임금자 입니다</span><br>");
+    }
+
+
+
+    /*
+      실습3. (프롬프트) 나이와 해당연도를 입력받아,
+      40세이상이고, 해당연도가 짝수해이고, 나이도 짝수일 경우
+      "건강검진 대상자입니다."
+      그렇지 않으면 "건강검진 대상자가 아닙니다."
+      (도큐먼트출력)
+    */
+
+    let age = Number(prompt("나이는 몇살입니까?", "34"));
+    let year = Number(prompt("해당연도를 입력하세요", "2025"));
+
+    // 나이가 40 >= 해당연도 짝수 === 나이도 짝수 
+    if (age >= 40 && year % 2 === 0 && age % 2 === 0) {
+      document.write("건강검진 대상자입니다.<br>");
+    } else {
+      document.write("건강검진 대상자가 아닙니다.<br>");
+    }
+
+
+    /*
+      실습4. else if문사용 (프롬프트) 월(month)을 입력받아,
+      9~11월이면 '가을입니다.'
+      6~8월이면 '여름입니다.'
+      3~5월이면 '봄입니다.'
+      그외 월이면 '겨울입니다.'를 else if문을 사용하여 코딩
+      (도큐먼트출력)
+    */
+
+    let month = Number(prompt("해당 월을 입력하세요(1~12):", "9"));
+
+    if (month >= 3 && month <= 5) {
+      document.write("현재 계절은 봄입니다.<br>");
+    } else if (month >= 6 && month <= 8) {
+      document.write("현재 계절은 여름입니다.<br>");
+    } else if (month >= 9 && month <= 11) {
+      document.write("현재 계절은 가을입니다.<br>");
+    } else {
+      document.write("현재 계절은 겨울입니다.<br>");
+    }
+
+
+    /*
+      실습5. switch-case문사용
+      (프롬프트) 1- 웹디자인, 2-웹개발,3-웹기획 중 숫자하나를 입력받아
+      1이면 '웹디자인 섹션은 401호에서 진행'
+      2이면 '웹개발 섹션은 402호에서 진행'
+      3이면 '웹기획 섹션은 403호에서 진행'
+      그외 '잘못입력'
+      (도큐먼트출력)
+    */
+
+    let position = prompt("1-웹디자인,2-웹개발,3-웹기획 중 숫자 하나 선택", "2");
+    let room, message;
+
+    switch (position) {
+      case "1":
+        room = "401호";
+        message = "웹디자인 섹션은";
+        document.write("<div class='flex'>" + message + "<h2 style='color:yellow'>" + room + "</h2>에서 진행</div>");
+        break;
+      case "2":
+        room = "402호";
+        message = "웹개발 섹션은";
+        document.write("<div class='flex'>" + message + "<h2 style='color:yellow'>" + room + "</h2>에서 진행</div>");
+        break;
+      case "3":
+        room = "403호";
+        message = "웹기획 섹션은";
+        document.write("<div class='flex'>" + message + "<h2 style='color:yellow'>" + room + "</h2>에서 진행</div>");
+        break;
+      default:
+        document.write("<div class='flex'>잘못 입력하셨습니다</div>");
+    }
+  </script>
+</body>
+
+</html>

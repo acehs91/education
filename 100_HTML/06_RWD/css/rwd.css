@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* 공통 CSS = PC 퍼스트 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap {
+    width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+/* Header */
+header {
+    width: 100%;
+    background-color: #bf545d;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.logo {
+    width: 96px;
+}
+header ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+header ul li {
+    width: 40px;
+    margin-top: 40px;
+}
+
+/* Hamberger 메뉴 추가 코딩 */
+header {
+    position: relative;
+}
+header nav:nth-child(3) {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    z-index: 9999;
+    transform: translateY(36px);
+    /* PC단에서는 안 보이도록 코딩 */
+    display: none;
+}
+header nav:nth-child(3) i {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Article */
+article {
+    background-color: #03588c;
+    text-align: center;
+    padding: 16px 0;
+    color: #fff;
+}
+article h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    /* (24/16) = 1.5 */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+article p {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 21px;
+    /* (21/16) = 1.3125 */
+    font-size: 1.3125rem;
+    line-height: 48px;
+}
+/* Contents */
+#gallery {
+    padding: 10px 0;
+}
+#gallery ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#gallery ul li {
+    width: 220px;
+    /* (220/960)*100 = 22.916666666666664 */
+    width: 22.9%;
+    margin: 10px;
+    /* (10/960)*100 = 1.0416666666666665 = 22.916666666666664 */
+    margin: 10px 1.04%;
+}
+#gallery ul li img {
+    width: 100%;
+    border-radius: 5px;
+}
+/* Footer */
+footer {
+    background-color: #0d0d0d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    /* (20/960)*100 = 2.083333333333333 */
+    padding: 20px 2%;
+    font-size: 13px;
+    /* 13/16 = 0.8125 */
+    font-size: 0.8125rem;
+}
+
+/* 768 이하 */
+@media screen and (max-width:768px) {
+    /* Contents */
+    #gallery {
+        padding: 10px 0;
+    }
+    #gallery ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    #gallery ul li {
+        width: 22.9%;
+        /* 값 수정 = 2단수 변화 */
+        width: 48%;
+        margin: 1%;
+    }
+    #gallery ul li img {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+/* 375 이하 */
+@media screen and (max-width:375px) {
+    /* Contents */
+    #gallery {
+        padding: 10px 0;
+    }
+    #gallery ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    #gallery ul li {
+        width: 22.9%;
+        /* 값 수정 = 단수 변화 */
+        width: 98%;
+        margin: 1%;
+    }
+    #gallery ul li img {
+        width: 100%;
+        border-radius: 5px;
+    }   
+
+    /* GNB메뉴 사라지게 하고, 햄버거 메뉴 나오도록 */
+    header nav:nth-child(2) {
+        display: none;
+    }
+    header nav:nth-child(3) {
+        display: block;
+    }
+}
+

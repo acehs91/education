@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건문 : if문</title>
+  <script>
+
+    /* a 단일 if문
+      if(조건식:ture,false){
+        실행문1;
+        실행문2;
+        ...
+        조건식이 true일 경우 실행할 자바스크립트코드
+      }
+    */
+
+    //  TEST 단일 if 문 
+    /*
+      age = prompt("나이를 입력하세요",20);
+      if(age >= 20){
+        document.write("입력받은 나이는" + age + "살 입니다.");
+      }
+  
+          
+      if (age < 20) {
+        document.write("<h1>투표불가능</h1>");
+      }else{
+        document.write("<h1>투표가능</h1>");
+      }
+  
+      age = String(age);  //number -> string 변환
+  
+      console.log(typeof age);
+  
+  
+      if (age > 19) {
+        alert("투표가능!!");
+      }
+  
+      if (age < 19) {
+        alert("투표불가능!!");
+      }
+    */
+
+    /*
+     실습 1. 단일 if문 (프롬프트) 점수를 입력받아,
+     만약 , 60점 이상이면 (경고창)필기 합격 , 60점 미만이면 (브라우저)"필기 불합격"
+    */
+
+    /*
+        var score = prompt("점수를 입력하세요",0);
+        if (score >= 60) {
+          alert("필기 합격");
+          document.write("<h1>필기 합격</h1>");
+        }
+        if(score < 60) {
+          alert(" 불합격");
+          document.write("<h1>필기 불합격</h1>");
+        }
+    */
+
+
+    /*
+    실습2. 단일 if문 (프롬프트)숫자를 입력받아,
+     숫자가 짝수이면 "짝수입니다"(경고창), 홀수면 "홀수입니다."(경고창)
+    */
+
+    /*
+     var num = prompt("숫자를 입력", 1);
+
+      console.log("변환 전" + typeof num); //  string
+      num = Number(num); // string -> number 변환
+  
+      if (num % 2 == 0) {
+        alert("짝수");
+      }
+  
+      if (num % 2 != 0) {
+        alert("홀수");
+      }
+    
+      console.log("변환 후" + typeof num); // number */
+
+    /* b. if ~ else 문 */
+
+    /*   if(조건식:ture,false){
+        실행문1;
+      }else{
+        실행문2;
+      }
+    */
+
+    /*     
+      var num = prompt("숫자를 입력", 1);
+    
+        if (num %2 == 0) {
+          alert("짝수!!");
+        } else {
+          alert("홀수!!");
+        }
+     */
+
+    /* 0 , "", null, undefined, NaN : false
+        그 외 : true */
+
+    if(0){ //false
+      alert("0은 true");
+    }else{
+      alert("0은 false");
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

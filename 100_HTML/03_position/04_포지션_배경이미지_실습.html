@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position + 배경이미지 실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            width: 960px;
+            height: 640px;
+            margin: 40px auto;
+            border: 14px solid #fff;
+            background-image: url(./images/avgers.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            /* 박스그림자 효과 */
+            box-shadow: 0 0 3px #000;
+            /* 위치기준값 */
+            position: relative;
+        }
+        #wrap p {
+            font-family: 'Anton',sans-serif;
+            font-size: 112px;
+            /* 포지션 */
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            z-index: 1;
+            text-shadow: 0 0 6px #000;
+            color: rgba(255,255,255,0.5);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>AVENGERS</p>
+    </div>
+</body>
+</html>

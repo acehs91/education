@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 그라디언트</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            display: inline-block;
+        }
+        .grad1 {
+            /* CSS3 미지원 브라우저 */
+            background: #a173bf;
+            /* 접두사(prefix) 사용 */
+            background: -webkit-linear-gradient(#a173bf, #eaf205);
+            background: -moz-linear-gradient(#a173bf, #eaf205);
+            /* 첫번째 방향값 생략시 top-bottom */
+            background: linear-gradient(#a173bf, #eaf205);
+            background: linear-gradient(left bottom, #a173bf, #eaf205);
+        }
+        .grad2 {
+            background: -webkit-linear-gradient(top, red, white 30%, red);
+            background: -moz-linear-gradient(top, red, white 30%, red);
+            background: linear-gradient(top, red, white 30%, red);
+        }
+        .grad3 {
+            background: -webkit-linear-gradient(45deg, #a173bf, #eaf205);
+            background: -moz-linear-gradient(45deg, #a173bf, #eaf205);
+            background: linear-gradient(45deg, #a173bf, #eaf205);
+        }
+        .grad4 {
+            background: -webkit-radial-gradient(white, yellow, green);
+            background: -moz-radial-gradient(white, yellow, green);
+            background: radial-gradient(white, yellow, green);
+        }
+        .grad5 {
+            background: -webkit-radial-gradient(circle, white, yellow, green);
+            background: -moz-radial-gradient(circle, white, yellow, green);
+            background: radial-gradient(circle, white, yellow, green);
+        }
+        .grad6 {
+            background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+    <div class="grad5"></div>
+    <div class="grad6"></div>
+</body>
+</html>

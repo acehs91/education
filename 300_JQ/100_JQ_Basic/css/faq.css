@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+#wrap {
+  max-width: 90%;
+  margin: 2% auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 1px #ccc;
+}
+
+header {
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  padding: 0 24px;
+  /* 플렉스 */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 21px;
+  line-height: 60px;
+}
+
+header>p {
+  line-height: 60px;
+}
+
+header>p button {
+  border: none;
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+}
+
+header+p {
+  padding: 24px;
+  line-height: 1.4;
+  color: #555;
+}
+
+section {
+  padding: 24px;
+}
+
+section article>h2 {
+  font-size: 17px;
+  color: #444;
+  padding: 20px 0;
+  margin-bottom: 8px;
+}
+
+section article>p {
+  width: 98%;
+  margin: 0 auto;
+  padding: 16px;
+  line-height: 1.4;
+  color: black;
+  background-color: #eee;
+  /* 로딩시 가리기 */
+  display: none;
+}
+
+footer {
+  margin-top: 30px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* 링크관련 */
+a:hover {
+  font-weight: 700;
+}
+
+/* 각각 버튼 */
+.open1,
+.close1 {
+  display: inline-block;
+  border: none;
+  width: 80px;
+  height: 36px;
+  background: #eee;
+  line-height: 36px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return 문</title>
+</head>
+<body>
+    <script>
+
+
+        /* 1. 호출한 곳에 결괏값을 던져줌 */
+        var num = 0;  // 2. 10을 받음
+        function plusNum(num) {
+            return num + 10; //3. 10+ 10 해서 다시 결괏값 20 던짐 리턴이없으면 호출되지않음
+        }
+        // alert(plusNum(10)); // 1. 10을 던져서 
+
+        
+        /* 2. return false; = 여기까지 실행 */
+        var int = 10;
+        var sum = 0;
+        var mul = 0;
+        function cal(int1) {
+            sum = int1 + int;
+            mul = int1 * int;
+            return mul;
+            return sum;
+        }
+        // 호출
+        document.write(cal(100));
+
+    </script>
+</body>
+</html>

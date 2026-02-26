@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <title>제이쿼리 조합 선택자</title>
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // 문서전체 글자색 gray
+      $('*').css('color', 'gray');
+      // 아이디 값 a = 글자색 red , 배경색 black
+      $('#a').css({ color: '#f00', backgroundColor: '#000' });
+      // div태그중 id값이 b인 요소만 선택 | 소스캡쳐, 캡쳐 넘버링 = 글자색 오렌지
+      $('div#b').css('color', 'orange');
+      // div태그중 class값이 test인 요소만 선택 | 소스캡쳐, 캡쳐 넘버링 = 글자색 그린
+      $('div.test').css({ color: 'green', backgroundColor: 'silver' });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>여러가지 제이쿼리 선택자</h1>
+  <div class="content">
+    <div id="a">
+      제이쿼리
+    </div>
+    <div>
+      여러가지 선택자
+    </div>
+    <div class="test">
+      애플 제품들
+    </div>
+    <div class="test main">
+      맥프로
+    </div>
+    <div>
+      <span>맥북프로</span>
+      <h2 id="c">맥북에어</h2>
+    </div>
+    <div id="b">
+      아이패드
+    </div>
+    <div class="test">
+      아이패드 프로
+    </div>
+    <div class="main">
+      아이패드 에어
+    </div>
+    <div class="test">
+      에어팟
+    </div>
+    <div>
+      <h2 class="test">애플태그</h2>
+    </div>
+  </div>
+</body>
+
+</html>

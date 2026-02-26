@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <title>제이쿼리 기본폼</title>
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <style>
+    .clickTest {
+      background: yellowgreen;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      border: solid 1px #000;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+
+      var elm = $('.clickTest');
+
+      // elm.on('click', function () {
+      //   elm.text('클릭하였습니다!!');
+      //   // $(this).text('클릭하였습니다!!');
+      // });
+
+      //on() 사용 = id 속성 이용하여 이벤트 각각 연결
+      // $("#div1").on("click", function () { $(this).text("클릭하였습니다!!"); });
+      // $("#div2").on("click", function () { $(this).text("클릭하였습니다!!"); });
+      // $("#div3").on("click", function () { $(this).text("클릭하였습니다!!"); });
+      // $("#div4").on("click", function () { $(this).text("클릭하였습니다!!"); });
+      // $("#div5").on("click", function () { $(this).text("클릭하였습니다!!"); });
+
+      /* 위의 불편함을 해결한 방법이 this 임 */
+      elm.on('click', function () {
+        $(this).text($(this).attr('id') +'클릭하였습니다.!!');
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="div1" class="clickTest">div!!</div>
+  <div id="div2" class="clickTest">div!!</div>
+  <div id="div3" class="clickTest">div!!</div>
+  <div id="div4" class="clickTest">div!!</div>
+  <div id="div5" class="clickTest">div!!</div>
+
+  <!-- button#btn$@4*3  버튼을 #btn id값으로4부터 3개까지 만들겠다.-->
+
+</body>
+
+</html>

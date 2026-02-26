@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM,23_문서객체모델02</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementsByName('check');
+            console.log("getElementsByName()=>" + btn);
+
+            var tag = document.getElementsByTagName('h3');
+            console.log(tag);
+
+            var ad = document.getElementById("heading4");
+            ad.style.border = "solid 1px #000"
+            ad.style.background = "green";
+
+            var heading1 = document.getElementById("heading1");
+            heading1.parentNode.removeChild(heading1);
+        }
+    </script>
+    <input type="button" value="버튼1" name="check">
+    <h3 id="heading1">자바스크립트</h3>
+    <h3 id="heading2">제이쿼리</h3>
+    <h3 id="heading3">css3</h3>
+    <h3 id="heading4">html5</h3>
+</body>
+
+</html>

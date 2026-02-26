@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return 문, Gallery</title>
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body>
+    <style>
+        #galleryzone {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        button {
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+            border: none;
+            background: #222;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        let num = 1;
+        function gallery(imgNum) {
+            // alert(imgNum);
+            if (imgNum) { // 다음버튼
+                if (num == 7) {
+                    return;
+                }
+                num++;
+            } else { // 이전버튼
+                if (num == 1) {
+                    return
+                }
+                num--;
+            }
+            // console.log(num);
+
+            // let phone = document.querySelector("#phone").src = "./images/img" + num + ".jpg";
+            let phone2 = document.querySelector("#phone").setAttribute("src", "./images/img" + num + ".jpg");
+            console.log(phone2);
+        }
+    </script>
+    <div id="galleryzone">
+        <p>
+            <img id="phone" src="./images/img1.jpg" alt="갤러리이미지" width="300" height="300">
+        </p>
+        <p>
+            <button onclick="gallery(0);">이전</button>
+            <button onclick="gallery(1);">다음</button>
+        </p>
+    </div>
+
+</body>
+
+</html>

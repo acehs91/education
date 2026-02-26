@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 기초 레이아웃 실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        header>h1 {
+            background-color: red;
+            height: 40%;
+        }
+        header>nav {
+            background-color: orange;
+            height: 60%;
+        }
+        article {
+            width: 100%;
+            height: 300px;
+            display: flex;
+        }
+        article>h2 {
+            width: 50%;
+            background-color: yellowgreen;
+        }
+        article>p {
+            width: 50%;
+            background-color: yellow;
+        }
+        section {
+            width: 100%;
+            height: 300px;
+            /* 플렉스 */
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        section>h2 {
+            width: 33.33%;
+            background-color: green;
+        }
+        section>p {
+            width: 33.33%;
+            color: #fff;
+        }
+        section>p:nth-child(2) {
+            background-color: blue;
+        }
+        section>p:nth-child(3) {
+            background-color: darkgoldenrod;
+        }
+        footer {
+            width: 100%;
+            height: 60px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>SNB 메뉴</h1>
+            <nav>GNB 메뉴</nav>
+        </header>
+        <main>
+            <article>
+                <h2>슬라이드영역1</h2>
+                <p>슬라이드영역2</p>
+            </article>
+            <section>
+                <h2>콘텐츠영역1</h2>
+                <p>콘텐츠영역2</p>
+                <p>콘텐츠영역3</p>
+            </section>
+        </main>
+        <footer>
+            <p>푸터영역</p>
+        </footer>
+    </div>
+</body>
+</html>

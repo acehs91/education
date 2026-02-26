@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 종합실습</title>
+    <style>
+        button {
+            width: 120px;
+            height: 80px;
+            background-color: darkgray;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+
+        /* 
+        // 그냥함수 호출     
+        (function () {
+            alert("자바스크립트 수업");
+        })();
+         */
+
+
+        /*실습1. 익명함수를 만들고, 로딩시 (경고창)"자바스크립트 수업"*/
+        // var noName = function () {
+        //     alert("익명함수: " + "자바스크립트 수업");
+        // };
+        // noName(); 
+
+
+
+        /*실습2. 선언적함수를 만들고 = test, 로딩시 (브라우저)"자바스크립트 개념정리"*/
+        // function test() {
+        //     document.write("선언적함수 : " + "자바스크립트 개념정리");
+        // }
+        // test(); 
+
+
+
+        /*
+          실습3. 
+          버튼1을 클릭했을때 => (경고창)"안녕하세요."
+          버튼2를 클릭했을때 => (경고창)"반갑습니다." 매개변수 사용 
+        */
+
+        function btn1(e) {
+            alert(e);
+        }
+
+        function btn2(e2) {
+            alert(e2);
+        }
+
+        /* 실습4. 배열실습 = 배열색 바꾸기 이벤트 코딩 해보기 */
+        var color = ["red", "green", "blue", "black", "pink"];
+
+        var i = 0; //초깃값
+        //console.log(color[2]);
+
+        function bgCh() {
+            var body = document.body;
+            body.style.backgroundColor = color[i];
+            i++;
+
+            if (i >= color.length) {
+                //만약 i 가 변수 color 배열에 담긴 갯수보다 높을때까지
+                // 로직은 i가 0,1,2,3,4 까지 갔을때 
+                i = 0; // 다시 i를 0으로 만들어준다
+            }
+        }
+
+        /* 실습5 */
+        var coding = ["HTML", "CSS", "javaScrip", "jQuery", "JAVA", "JSP", "Oracle","React"];
+        for(var i=0; i<coding.length; i++){
+            document.write(coding[i]+"<br>");
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="btn1('안녕하세요');">버튼1</button>
+    <button onclick="btn2('반갑습니다');">버튼2</button>
+    <button onclick="bgCh();">배경바꾸기</button>
+</body>
+
+</html>

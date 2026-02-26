@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    반복문, for문
+      for(초깃값;조건식;증감식){
+      실행문;
+    }
+  </title>
+  <style>
+    /* h1 {
+      font-weight: bold;
+    }
+
+    strong {
+      color: red;
+      font-weight: bold;
+    } */
+  </style>
+  <script>
+   
+    // 1.실습 
+    // i <= 10 자바스크립트 문구 10번 출력후 10번 출력이후 경고창 "종료"
+/*      
+       for (var i = 1; i <= 10; i++) {
+         document.write("자바스크립트: " + i + "<br>");
+       }
+       alert("반복종료" + i + "번");
+    */
+
+    //2.실습 1부터 10까지의 합(힌트:복합대입연산자 +=, i, 총합변수)
+    //[도큐먼트] 1부터 10까지의 합은 ??? 입니다.
+/*         
+      var i = 0;
+      var num = 0;
+      for (i = 1; i <= 10; i++) {
+        num += i;
+      }
+      document.write("1부터 10까지의 합은" + num + " 입니다.");
+    */
+
+    //3.실습 <h1>~<h6>순으로 풀스텍개발자 
+    //[도큐먼트] 1부터 6까지의 출력
+/*               
+      for (var i=1; i<=6; i++) {
+        var num = i;
+        console.log(num);
+        document.write("<h"+ num +">"+"풀스텍개발자"); 
+      } 
+        */
+
+    //4.실습 역순으로 <h6>~<hq>순으로 풀스텍개발자 
+    // [도큐먼트] 6부터 1까지의 출력
+ /* 
+    for (var i = 6; i >= 1; i--) {
+      var num = i;
+      document.write("<h" + num + ">" + "풀스텍개발자");
+    }
+ */
+
+    //5.실습 <h3> 만 뽑아 쓰기
+    // [도큐먼트] 6부터 1까지의 출력
+/*     
+        for (var i = 1; i <= 6; i++) {
+          var num = i;
+          console.log(num);
+          if (num == 3) {
+              document.write("<h" + num + ">" + "풀스텍개발자");
+          }
+        }
+     
+ */
+    //6.[도큐먼트] 구구단 2단 출력 = 단수x승수 = 단수 * 승수
+/* 
+     var i,dan,result;
+     dan = 2;
+     document.write("<h1>" + dan + "단</h1>");
+ 
+     for (i=1; i<= 9; i++) {
+       result = (dan * i);
+       console.log(result);
+       document.write(dan + "x" + i + " = <strong class='red'>" + result + "</strong>" + "<br>");
+     }
+  */
+    //7.(프롬프트) 구구단 단수를 입력받아 */
+    // [도큐먼트] 해당 단수 결과물 출력
+    
+    var dan = Number(prompt("해당 구구단수를 입력해주세요.",7));
+    var i, result;
+
+    document.write("<h1>" + dan + "단</h1>");
+
+    for (i = 1; i <= 9; i++) {
+      result = (dan * i);
+      console.log(result);
+      document.write(dan + "x" + i + " = " + result + "" + "<br>");
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

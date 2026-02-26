@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <title>제이쿼리, 이벤트 - 스크롤</title>
+  <style>
+    body {
+      width: 3000px;
+      height: 5000px;
+    }
+
+    #wrap {
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      z-index: 1;
+      background-color: darkgray;
+    }
+
+    span {
+      font-size: 36px;
+      color: #000;
+    }
+  </style>
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).on('scroll', function () {
+        var scrT = $(this).scrollTop();
+        console.log('스크롤탑 값 : ' + scrT);
+        var scrL = $(this).scrollLeft();
+        console.log('스크롤레프트 값 : ' + scrL);
+        $('.top').text(scrT);
+        $('.left').text(scrL);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h2>SCROLL</h2>
+    <p>
+      scrollTop : <span class="top">0</span> px
+      <br><br><br>
+      scrollLeft : <span class="left">0</span> px
+    </p>
+  </div>
+</body>
+
+</html>

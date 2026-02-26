@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 사용</title>
+    <style>
+        img {
+            width: 320px;
+            height: 320px;
+        }
+        body {
+            /* background-color: #000; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 로컬 컴퓨터에서 이미지 사용하기 -->
+    <p>
+        <img src="./images/first.jpg" alt="물방울">
+        <img src="./images/flower.jpg" alt="꽃">
+    </p>
+    <p>
+        <img src="./images/flowerboom.jpg" alt="꽃의 물방울">
+        <img src="./images/firework.jpg" alt="불꽃놀이">
+        <img src="./images/tree.jpg" alt="나무이미지">
+    </p>
+    <!-- 2. CDN 방식으로 이미지 불러오기 -->
+    <img src="https://cdn.pixabay.com/photo/2022/12/01/04/42/man-7628305_1280.jpg" alt="CDN 이미지 애니">
+    <img src="https://images.unsplash.com/photo-1755288556498-0aa1eb1f16f3?q=80&w=1536&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="언스플래쉬 이미지">
+    <a href="http://www.daum.net" target="_blank">
+        <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음로고">
+    </a>
+    <!-- 3. 가상 이미지 불러오기 -->
+    <img src="http://place-hold.it/640x480/00ff00" alt="가상이미지">
+    <!-- 4. 투명배경사용 .png -->
+    <img src="./images/apple.png" alt="투명배경이미지 애플로고">
+    <!-- 5. 벡터방식사용 .svg -->
+    <img src="./images/AppleLine.svg" alt="애플로고 svg">
+</body>
+</html>

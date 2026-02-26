@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        미디어쿼리 작성시 주의사항
+            a. and 구문 앞, 뒤에는 (반드시) 공백 한칸
+            b. (조건문){실행문;} 사이는 붙여서 코딩 => 모던 브라우저에서는 띄어도 됨
+            c. min-/max- 접두어 사용시
+               min-접두어 : (반드시) 미디어 쿼리 크기가 작은것에서 큰것 순서로 코딩 => 모바일 퍼스트
+               max-접두어 : (반드시) 미디어 쿼리 크기가 크것에서 작은것 순서로 코딩 => PC 퍼스트 라고 부릅시다
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            height: 500px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        /* (모바일 퍼스트) */
+        /* 미디어쿼리 너비값 = 1024px 이상, 768px이상, 360px 이상 */
+        /* 모바일 미디어쿼리 360px 이상 */
+        @media all and (min-width:360px){
+            #wrap {
+                width: 30%;
+                background-color: aqua;
+            }
+            #wrap h1 {
+                color: #000;
+                font-size: 0.875rem;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        /* 태블릿 미디어쿼리 768px 이상 */
+        @media all and (min-width:768px){
+            #wrap {
+                width: 60%;
+                background-color: pink;
+            }
+            #wrap h1 {
+                color: #f00;
+                font-size: 1rem;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        /* PC 미디어쿼리 1024px 이상 */
+        @media all and (min-width:1024px){
+            #wrap {
+                width: 90%;
+                background-color: orange;
+            }
+            #wrap h1 {
+                color: #00f;
+                font-size: 1rem;
+            }
+            img {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>반응형 웹사이트</h1>
+        <img src="./images/img03.png" alt="구멍가게">
+    </div>
+</body>
+</html>

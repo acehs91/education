@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table : colgroup</title>
+    <style>
+        table, tr, td, th {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>colgroup은 반드시 caption 다음에 코딩</caption>
+        <colgroup>
+            <col style="width: 200px">
+            <col style="width: 300px">
+            <col style="width: 200px">
+            <col style="width: 300px">
+        </colgroup>
+        <tr>
+            <th>이름</th>
+            <th>김현수</th>
+            <th>연락처</th>
+            <th>010-1234-5678</th>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3">서울시</td>
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3">직훈교사</td>
+        </tr>
+    </table>
+</body>
+</html>

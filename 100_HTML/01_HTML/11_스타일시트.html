@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 스타일시트</title>
+    <!-- 1. 내부 스타일 -->
+    <style>
+        /* 선택자(selector) {속성명:속성값;} */
+        /* a. 전체선택자 */
+        * {
+            color: #000;
+        }
+        /* b. 요소명 선택자 */
+        h1 {
+            color: green;
+        }
+        /* c. 클래스 선택자 */
+        .txt_1 {
+            color: white;
+            background-color: black;
+        }
+        /* 캐스캐이딩 원리 */
+        .txt_2 {
+            color: purple;
+            background-color: orange;
+            font-size: 36px;
+        }
+        .txt_2 {
+            color: cyan;
+            /* 캐스캐이딩 원리가 아니고, 단지 새로운 속성을 코딩한 것임 */
+            font-weight: normal;
+        }
+        /* d. 아이디 선택자 */
+        #txt_3 {
+            background-color: #f0f;
+        }
+        /* 그룹 선택자 */
+        .group, .group1 {
+            background-color: cyan;
+        }
+
+        /* [실습] 각 구분기호 . # , 에 CSS를 적용시키세요.
+        공통 글자크기 48px, 글자두께 볼드 
+        글자색은 각각 레드, 그린, 블루로 코딩 */
+        .dot, .sharp, .rest {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .dot {
+            color: red;
+        }
+        .sharp {
+            color: green;
+        }
+        .rest {
+            color: blue;
+        }
+    </style>
+    <!-- 3. 외부 스타일 -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+</head>
+<body>
+    <h1>CSS(CascadingStyleSheet)</h1>
+    <p>
+        웹표준에 의한 웹문서는 디자인과 내용이 분리되어 있습니다.
+    </p>
+    <p>
+        내용을 HTML을 이용해 구성하고, 디자인은 CSS를 이용해 꾸미는 것입니다.
+    </p>
+    <!-- 2. 인라인 스타일 = 시작태그에 속성명="속성값" -->
+    <h2 style="color:aqua;">인라인 스타일시트 적용하기</h2>
+
+    <h3 class="txt_1">class 스타일시트</h3>
+    <p>
+        class로 스타일 정의시 구분기호로 <span class="dot">.</span>을 사용
+    </p>
+
+    <h3 class="txt_2">스타일 캐스캐이딩 원리</h3>
+    <p>
+        같은 이름의 선택자에 같은 속성명이 정의되어 있을 때, <br>
+        속성값이 다르다면, 하단에 있는 스타일의 속성값이 적용됨.
+    </p>
+
+    <h3>ID 스타일시트</h3>
+    <p id="txt_3">
+        id로 스타일 정의시 구분기호로 <span class="sharp">#</span>을 사용
+    </p>
+
+    <h3 class="group">그룹 선택자</h3>
+    <p class="group1">
+        그룹 선택자 구분기호는 <span class="rest">,</span>를 사용하여 여러개의 요소를 동시에 선택
+    </p>
+</body>
+</html>

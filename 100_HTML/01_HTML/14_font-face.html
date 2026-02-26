@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@font-face 웹폰트 사용하기</title>
+    <style>
+        @font-face {
+            font-family: 'trana';
+            /* MS에서 만든 폰트로 font-face 처음 도입 => IE8이하 버전은 .eot만 인식 */
+            src: url('./font/trana.eot'),
+            /* ttf/otf 압축버전, 다른 글꼴 형식보다 빠르게 로드 | 웹에서 사용할 목적으로 개발 */
+            url('./font/trana.woff') format('woff'),
+            /* 맥/윈도우의 가장 일반적인 글꼴. IE8 지원안함 | 단점은 용량이 큼 */
+            url('./font/trana.ttf') format('truetype');
+        }
+        .user_font {
+            font-family: "trana", sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using Default Fonts</h1>
+    <p class="user_font">
+        Using Trana Fonts
+    </p>
+</body>
+</html>

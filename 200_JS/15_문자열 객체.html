@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 객체 메서드/속성</title>
+    <script>
+        var str = "Hello Thank you good luck to you";
+
+        //인덱스 번호에 해당하는 (문자)를 반환
+        document.write(str.charAt(10), "<br>"); //k
+
+        //왼쪽부터 찾을 문자와 제일 먼저 일치하는 문자의 (인덱스번호)를 반환 (암기)
+        document.write(str.indexOf("you"), "<br>"); //12
+
+     
+        //오른쪽부터 찾을 문자와 제일 먼저 일치하는 문자의 (인덱스번호)를 반환
+        document.write(str.lastIndexOf("you"), "<br>"); //29 | 찾는 값이 없을 경우 -1 반환
+
+        //왼쪽부터 찾을 문자와 일치하는 문자를 찾아, 제일 먼저 일치하는 문자를 반환 (암기)
+        document.write(str.match("luck"), "<br>"); //luck | 찾는 값이 없을 경우 null 반환
+
+        //왼쪽부터 바꿀 문자와 일치하는 문자를 찾아, 제일 먼저 일치하는 새문자를 치환 (암기)
+        document.write(str.replace("you", "me"), "<br>"); // you->me
+        
+        //왼쪽부터 찾을 문자와 제일 먼저 찾는 문자의 (인덱스번호)를 반환
+        document.write(str.search("you"), "<br>"); //12
+
+        //문자를 자른후, 남는 문자를 치환 (암기) => 인덱스번호 3부터 7이전까지 추출 (=>3,4,5,6)
+        document.write(str.slice(3, 7), "<br>"); //lo T
+
+        //문자 갯수만큼 문자열 반환 (암기) = > 인덱스번호 21부터 ,글자수4개 추출
+        document.write(str.substr(21, 4), "<br>"); //luck
+
+        //영문대문자를 모두 소문자로 치환 (암기)
+        document.write(str.toLowerCase(), "<br>"); // LowerCase
+
+        //영문소문자를 모두 대문자로 치환 (암기)
+        document.write(str.toUpperCase(), "<br>"); // UpperCase
+
+        //갯수반환 (암기)
+        document.write(str.length, "<br>"); //총 길이 갯수 32
+        //문자열 앞 또는 뒤에 공백 문자열 삭제
+        document.write(str.length, "<br>"); //총 길이 갯수 32
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

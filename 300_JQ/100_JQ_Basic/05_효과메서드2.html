@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>제이쿼리, 효과메서드 실습</title>
+    <style>
+        button {
+            padding: 10px;
+            background-color: darkgray;
+            border: none;
+            outline: none;
+            color: #000;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        img {
+            display: none;
+        }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').eq(0).click(function(){
+                $('p>img').fadeIn();
+            });
+            $('button').eq(1).click(function(){
+                $('p>img').fadeOut();
+            });
+            $('button').eq(2).click(function(){
+                $('p>img').fadeToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>fadeIn</button>
+    <button>fadeOut</button>
+    <button>fadeToggle</button>
+    <p>
+        <img src="./images/slam_jung.jpg" alt="효과이미지">
+    </p>
+</body>
+</html>

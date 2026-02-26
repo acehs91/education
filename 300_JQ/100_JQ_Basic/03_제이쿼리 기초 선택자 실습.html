@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 기초 선택자 실습</title>
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('h2').css('color','red'),
+      $('h3').css('color','green'),
+      $('h3').css('background','pink');
+      $('ul').children().css({color:'blue', listStyle:'none'}); //객체타입
+      $('ul').children('li:first-child').css('color','red');
+      $('.class1').css({fontSize:'36px'});
+      $('#id1').css({color:'red',background:'yellow'});
+    });
+  </script>
+  <style>
+    ul{
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>제이쿼리 선택자1</h2>
+  <h3>제이쿼리 선택자2</h3>
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>
+  </ul>
+  <h4 class="class1">제이쿼리 선택자3</h4>
+  <h4 id="id1">제이쿼리 선택자4</h4>
+</body>
+
+</html>

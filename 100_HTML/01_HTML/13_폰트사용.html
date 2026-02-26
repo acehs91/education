@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 사용</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        h1 {
+            font-family: "Roboto", sans-serif;
+            font-size: 32px;
+        }
+        h2 {
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 24px;
+        }
+        h3 {
+            font-family: "Oswald", sans-serif;
+            font-size: 20px;
+        }
+        .nanumpen {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        .notoserif {
+            font-family: "Noto Serif KR", serif;
+        }
+        .montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            /* normal = 400, bold = 700 */
+            font-weight: 700;
+            color: orange;
+            /* 행간 = 생략시 기본단위 em | 폰트크기가 기준값 */
+            line-height: 1.5em;
+            /* 폰트 한줄 쓰기 */
+            font: bold italic 16px/1.5 'Montserrat', sans-serif;
+            color: skyblue;
+        }
+        .font_size {
+            /* 폰트 사이즈 가변계산 */
+            /* 16px = 1em = 100% = 1rem */
+            font-size: 30px;
+            /* (30/16) */
+            font-size: 1.875em;
+            font-size: 187.5%;
+        }
+        .color_font {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 24px;
+            color: #0000ff;
+            color: #00f;
+            color: blue;
+            color: rgb(0,0,255);
+            /* a(alpha) = 0부터 1까지의 값 */
+            color: rgba(0,0,255,0.5);
+        }
+        /* rem 단위 | 기준은 root = html */
+        .rem {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Web Standard Publishing</h1>
+        <h2>웹표준 방식 코딩</h2>
+        <h3>OSWALD</h3>
+        <p class="nanumpen">나눔펜스크립트</p>
+        <p class="notoserif">NotoSerif</p>
+        <p class="montserrat">Montserrat</p>
+        <p class="font">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint illum ut vero
+            delectus, vel provident corrupti quia, at, amet aliquid eum possimus
+            reprehenderit nemo? Nesciunt eos ex quas itaque similique?
+        </p>
+        <p class="font_size">
+            FONT SIZE
+        </p>
+        <p class="color_font">글자색</p>
+        <p class="rem">
+            rem 단위
+        </p>
+    </div>
+</body>
+</html>

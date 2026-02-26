@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ <title>제이쿼리, 애니메이션</title>
+ <style>
+  button {
+   cursor: pointer;
+  }
+
+  div {
+   width: 50px;
+   height: 50px;
+   margin: 20px;
+   background-color: skyblue;
+   cursor: pointer;
+   position: absolute;
+   left: 50px;
+   top: 50px;
+   z-index: 1;
+  }
+
+  .delay {
+   width: 300px;
+   height: 100px;
+   background: purple;
+   cursor: pointer;
+   position: absolute;
+   left: 50px;
+   top: 150px;
+   z-index: 1;
+   display: none;
+  }
+ </style>
+ <script src="./js/jquery-1.12.4.min.js"></script>
+ <script src="./js/jquery-3.3.1.min.js"></script>
+ <script>
+  $(document).ready(function () {
+   /* 
+     1.animation({속성명:속성값(숫자),시간,속도,콜백함수})
+       a. 속성 : (반드시)매게변수값으로 입력(=>속성값이 숫자값으로 사용되는 속성들만 사용가능)
+               => 제이쿼리 코어 플로그인일 경
+       b. 시간 : 'slow', nomal','fast' 밀리세컨
+       c. 속도 : swing(기본값), linear(동일속도)
+       d-1. 콜백함수 : 해당 메서드가 실행이 된 이후 호출하여 사용되는 함수
+       d-2. 인자로 쓰이는 함수가 콜백                                       
+   */
+
+   // $('div').mouseover(function () {
+   //   $(this).animate({ width: 100, height: 100 }, 'slow', 'linear');
+   // });
+   // $('div').mouseout(function () {
+   //   $(this).animate({ width: 50, height: 50 }, 'slow', 'linear');
+   // });
+
+   /* 실습1. 버튼1 클릭할때마다 50px씩 오른쪽 */
+   $('button').eq(0).click(function () {
+    $('div').stop().animate({ left: '+=50' }, 'slow');
+   })
+
+   /* 실습2. 버튼2을 클릭할때마다 50px씩 왼쪽으로 */
+   $('button').eq(1).click(function () {
+    $('div').stop().animate({ left: '-=50' }, 'slow');
+   })
+
+   /* 실습3. 버튼3을 클릭하면 초기화*/
+   $('button').eq(2).click(function () {
+    $('div').animate({ left: '50px' }, 'slow');
+   })
+
+   /* 실습4 . 버튼4를 클릭하면 delay 1초 뒤 애니메이션 실행*/
+   // $('button').eq(-1).click(function () {
+   //   $('.delay').stop().delay(1000).animate({left:300},'slow');
+   // })
+
+   /* 실습4. DELAY 버튼 클릭시 delay클래스 박스 나오도록 코딩 | on() 사용 = 캡쳐, 넘버링 */
+   $('button').eq(-1).on('click', function () {
+    $('.delay').show().delay(1000).animate({ left: 300 }, 'slow');
+   });
+   
+  });
+ </script>
+</head>
+
+<body>
+ <div></div>
+ <div class="delay"></div>
+ <!-- button{버튼$}*3 -->
+ <button>버튼1</button>
+ <button>버튼2</button>
+ <button>버튼3</button>
+
+ <button>DELAY</button>
+ <!-- button{delay} -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 2px solid #000;
+            margin: 0 0 20px 20px;
+        }
+        .bg1 {
+            background-image: url(./images/bg4.jpg);
+            background-size: auto;
+        }
+        .bg2 {
+            background-image: url(./images/bg4.jpg);
+            background-size: contain;
+        }
+        .bg3 {
+            background-image: url(./images/bg4.jpg);
+            /* 반응형 관련 속성 */
+            background-size: cover;
+        }
+        .bg4 {
+            background-image: url(./images/bg4.jpg);
+            background-size: 200px 150px;
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+        }
+        .bg5 {
+            background-image: url(./images/bg4.jpg);
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .bg6 {
+            background-image: url(./images/bg4.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg1">배경이미지</div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+    <div class="bg6"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술연산자</title>
+    <style>
+        b {
+            color: red;
+        }
+    </style>
+    <script>
+        /* 데이터 형 : 문자형(String) | str, str2 | 자바스크립트, 10 => (콘솔)출력*/
+        var str = "자바스크립트";
+        var str2 = '10';
+        console.log(str + "," + str2);
+        document.write(str + "<br>");
+        document.write(str2 + "<br>");
+        // str2 데이터 타입 => (콘솔)출력
+        console.log(typeof(str2));
+
+        /* 데이터형 : 숫자형(Number) */
+        var num1 = 10;
+        var num2 = 5;
+        var num3 = 3;
+
+        /* 데이터형 : 논리형(Boolean) */
+        var bool = true;
+        var boolTwo = false;
+        document.write("bool 변수의 데이터 형(Data Type)은? <b>" + typeof(bool) + "</b> 입니다.<br>");
+
+        /* 데이터형 : undefined */
+        var undefinedDeclear;
+
+        /* 데이터형 : null */
+        var clear = null;
+
+        /* #1. 산술연산자 = +,-,*,/,% */
+        var result = null;
+        result = num1 + num2;
+        document.write("두 수의 합은 ? <b>" + result + "</b><br>");
+        result = num1 - num2;
+        document.write("두 수의 차는 ? <b>" + result + "</b><br>");
+        result = num1 * num2;
+        document.write("두 수의 곱은 ? <b>" + result + "</b><br>");
+        result = num1 / num2;
+        document.write("두 수의 나누기값은 ? <b>" + result + "</b><br>");
+        
+        // 나머지값 구하기
+        result = num1 % num3;
+        document.write("두 수의 나머지값은 ? <b>" + result + "</b><br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

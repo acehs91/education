@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합대입연산자</title>
+    <style>
+        b {
+            color: red;
+        }
+    </style>
+    <script>
+        /* 복합 대입연산자 
+           : 기존 Data에 변수값 추가 | 변수명 한번만 사용하여 Data를 누적시키기 위해 사용 */
+        var num1 = 10;
+        var num2 = 3;
+        console.log(num1, num2);
+        /* var result = 0;
+        result = num1 + num2;
+        alert(result); */
+
+        num1 += num2; // num1 = num1 + num2;
+        document.write("복합 대입연산자의 값 : <b>" + num1 + "</b><br>"); // 13
+        num1 -= num2;
+        document.write("복합 대입연산자의 값 : <b>" + num1 + "</b><br>"); // 13-3=10
+        num1 *= num2;
+        document.write("복합 대입연산자의 값 : <b>" + num1 + "</b><br>"); // 30
+        num1 /= num2;
+        document.write("복합 대입연산자의 값 : <b>" + num1 + "</b><br>"); // 10
+        num1 %= num2;
+        document.write("복합 대입연산자의 값 : <b>" + num1 + "</b><br>"); // 10/3 나머지1
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

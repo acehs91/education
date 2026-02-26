@@ -1,0 +1,77 @@
+@charset "utf-8";
+body {
+    font: 14px/1.5 "Noto Sans KR", sans-serif;
+    color: #333;
+}
+#wrap {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+/* Header */
+header {
+    background-color: #123456;
+    padding: 10px 0;
+}
+header h1 {
+    font: 30px 'Noto Serif KR', serif;
+    font-weight: 700;
+    color: #cc0;
+    text-align: center;
+}
+header h1 strong {
+    font-size: 300%;
+    color: #ffd;
+}
+header h1 span {
+    font-size: 150%;
+}
+header h1 em {
+    font-size: 200%;
+    color: #ccc;
+}
+/* Contents */
+section {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+/* GNB menu */
+section nav {
+    width: 200px;
+    padding: 20px;
+}
+.gnb li {
+    padding: 5px 0;
+}
+.gnb li a:hover {
+    color: #662;
+    border-bottom: 1px dashed #662;
+}
+/* Main Contents */
+section #contents_wrap {
+    width: 600px;
+    background-color: #fff;
+}
+section #contents_wrap h2 {
+    font: bold 24px 'Noto Serif KR', serif;
+    color: yellow;
+    background-color: #800;
+    padding: 10px 20px;
+}
+section #contents_wrap p {
+    padding: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+/* Footer */
+footer {
+    background-color: #aaa;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+}
+footer b {
+    color: #800;
+}

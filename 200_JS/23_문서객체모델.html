@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM,문서객체모델</title>
+</head>
+
+<body>
+    <script>
+        /* a 요소 노드와 텍스트 노드 모두 추가하는 경우 
+        노드는 부모자식관계에서 나뭇가지라 생각하면 된다. */
+
+        //#1. 문서에 요소 노드 생성
+        var heading = document.createElement("h1");
+
+        //#2. 문서에 텍스트노드 생성
+        var text = document.createTextNode("텍스트 노드를 생성");
+
+
+        //#3. 요소 노드와 텍스트 노드 연결
+        heading.appendChild(text); //appendChild 자식 노드 추가
+
+        //#4. document body 자식(자손)으로 연결
+        document.body.appendChild(heading);
+
+
+        /* b. 요소 노드만 있는 경우 (속성값 추가) */
+        var img = document.createElement('img');
+        img.src = "./images/img2.jpg";
+        img.alt = "제니이미지";
+        img.width = 300;
+        img.height = 300;
+
+        document.body.appendChild(img);
+
+        function changeimg() {
+            console.log(img)
+            img.src = "./images/img3.jpg";
+            img.setAttribute("src", "./images/img3.jpg");
+        }
+        function restoreimg() {
+            console.log(img)
+            img.src = "./images/img2.jpg";
+        }
+    </script>
+    <input type="button" value="이미지바꾸기" onclick="changeimg()">
+    <input type="button" value="이미지되돌리기" onclick="restoreimg()">
+    <!-- <img src="./images/img2.jpg" alt="제니이미지"> -->
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜보정객체</title>
+    <style>
+        strong {
+            color: red;
+        }
+    </style>
+    <script>
+
+        /* 1. 날짜 객체 생성 Date | today = 참조 변수명 => 콘솔 출력 ; */
+        var today = new Date;
+        //console.log(today);
+        var thisYear = today.getFullYear(); //년
+        var thisMonth = today.getMonth() + 1;  //월 
+        var thisDate = today.getDate();  //날짜 
+        var thisDay = today.getDay();  //일 일요일(0) ~ 토요일(6)
+        var thisHour = today.getHours(); // 시
+        var thisMin = today.getMinutes(); // 분
+        var thisSec = today.getSeconds(); // 초 
+        var thisMilliSec = today.getMilliseconds(); // 밀리세컨
+
+
+        /* 스위치 케이스문을 써서 해당 요일을 나오게해야한다 */
+        switch (thisDay) {
+            case 0:
+                dayName = "일요일";
+                break;
+            case 1:
+                dayName = "월요일";
+                break;
+            case 2:
+                dayName = "화요일";
+                break;
+            case 3:
+                dayName = "수요일";
+                break;
+            case 4:
+                dayName = "목요일";
+                break;
+            case 5:
+                dayName = "금요일";
+                break;
+            case 6:
+                dayName = "토요일";
+                break;
+        }
+
+        document.write("해당 년은: <strong>" + thisYear + "</strong>년 입니다.<br>");
+        document.write("해당 월은: <strong>" + thisMonth + "</strong>월 입니다.<br>");
+        document.write("해당 일은: <strong>" + thisDate + "</strong>월 입니다.<br>");
+        document.write("해당 요일은: <strong>" + thisDay + "</strong>일 입니다.<br>");
+        document.write("해당 요일은: <strong>" + dayName + "</strong> 입니다.<br>");
+        document.write("해당 시는: <strong>" + thisHour + "</strong> 입니다.<br>");
+        document.write("해당 분은: <strong>" + thisMin + "</strong> 입니다.<br>");
+        document.write("해당 초는: <strong>" + thisSec + "</strong> 입니다.<br>");
+        document.write("해당 밀리세컨: <strong>" + thisMilliSec + "</strong> 입니다.<br>");
+        
+
+
+        /* 만약 오늘날짜에서 크리스마스날 alert창이 뜨게하려면? */
+
+        // 오늘 날짜
+        var start = new Date();
+        // 목표 날짜 (크리스마스 이브)
+        var end = new Date("2025-12-24");
+        // 밀리초 차이
+        var diff = end.getTime() - start.getTime();
+        // 변환: 일 단위
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        if (days > 0) {
+            document.write("크리스마스 이브까지 " + days + "일 남았습니다!");
+        } else if (days === 0) {
+            alert("오늘은 크리스마스 이브입니다!");
+        } else {
+            document.write("크리스마스 이브가 지났습니다 ");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

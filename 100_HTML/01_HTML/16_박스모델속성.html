@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model : 기본속성</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <style>
+        body {
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid #000;
+        }
+        /* 블록레벨요소 */
+        p {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: yellow;
+            padding: 20px;
+            border: 4px solid #000;
+            /* 200-20-20-4-4 */
+            width: 152px;
+            height: 152px;
+            margin-bottom: 40px;
+        }
+        .box2 {
+            background-color: blue;
+            padding: 10px;
+            border: 4px solid #000;
+            /* 200-10-10-4-4- */
+            width: 172px;
+            height: 172px;
+            margin-bottom: 40px;
+        }
+        .box3 {
+            background-color: pink;
+            padding: 15px;
+            border: 4px solid #000;
+            /* 200-15-15-4-4- */
+            width: 162px;
+            height: 162px;
+            margin-bottom: 80px;
+        }
+        /* 인라인레벨요소 */
+        span {
+            width: 200px;
+            height: 200px;
+        }
+        .txt_1 {
+            background-color: yellowgreen;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .txt_2 {
+            background-color: cyan;
+            display: block;
+            margin-bottom: 30px;
+        }
+        .txt_3 {
+            background-color: purple;
+            display: inline-block;
+            margin-bottom: 32px;
+            margin-right: 40px;
+        }
+        .txt_4 {
+            background-color: silver;
+            display: inline-block;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 블록레벨요소 -->
+    <p class="box1">BOX1</p>
+    <p class="box2">BOX2</p>
+    <p class="box3">BOX3</p>
+    <!-- 인라인레벨요소 -->
+    <span class="txt_1">인라인레벨요소1</span>
+    <span class="txt_2">인라인레벨요소2</span>
+    <span class="txt_3">인라인레벨요소3</span>
+    <span class="txt_4">인라인레벨요소4</span>
+</body>
+</html>

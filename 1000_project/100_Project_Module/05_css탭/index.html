@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Module, CSS 탭</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="#">
+  <link rel="apple-touch-icon-precomposed" href="#">
+  <link rel="stylesheet" href="./css/reset.css">
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/prefixfree.min.js"></script>
+  <style>
+    html,
+    body {
+      font-size: 62.5%;
+    }
+
+    .tab_content {
+      max-width: 960px;
+      margin: 100px auto;
+      text-align: center;
+      /* 빈공간 없애기 */
+      font-size: 0;
+    }
+
+    /* Tab Button */
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]+label {
+      display: inline-block;
+      font-size: 1.4rem;
+      background: #ccc;
+      color: #222;
+      cursor: pointer;
+      border: 1px solid #000;
+      border-right: 0;
+      padding: 20px;
+    }
+
+    #tab03+label {
+      border-right: 1px solid #000;
+    }
+
+    /* Tab Button 효과 */
+    input[type="radio"]:checked+label {
+      background: #222;
+      color: #fff;
+    }
+
+    /* Tab Contents */
+    .content {
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      background: darkgray;
+      padding: 32px;
+      font-size: 4.8rem;
+      font-weight: 700;
+      font-family: 'Roboto', sans-serif;
+      /* 로딩시 안 보이도록 코딩 */
+      display: none;
+    }
+
+    /* Tab Button과 Tab Contents 연동 */
+    input[id="tab01"]:checked~.con1 {
+      display: block;
+    }
+
+    input[id="tab02"]:checked~.con2 {
+      display: block;
+    }
+
+    input[id="tab03"]:checked~.con3 {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tab_content">
+    <!-- Tab Button -->
+    <input type="radio" name="tabmenu" id="tab01" checked>
+    <label for="tab01">BUTTON1</label>
+    <input type="radio" name="tabmenu" id="tab02">
+    <label for="tab02">BUTTON2</label>
+    <input type="radio" name="tabmenu" id="tab03">
+    <label for="tab03">BUTTON3</label>
+    <!-- /Tab Button -->
+
+    <!-- Tab Contents -->
+    <div class="content con1">
+      Tab Contents 01
+    </div>
+    <div class="content con2">
+      Tab Contents 02
+    </div>
+    <div class="content con3">
+      Tab Contents 03
+    </div>
+    <!-- /Tab Contents -->
+  </div>
+</body>
+
+</html>

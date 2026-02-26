@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수사용, 이벤트 사용, 배열사용</title>
+    <style>
+        #bgc {
+            width: 100%;
+            height: 480px;
+        }
+        button {
+            width: 120px;
+            height: 80px;
+            background-color: silver;
+            border: none;
+            border-radius: 16px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // 1. 배열명 color에 문자열 값 할당
+        var color = ["red","green","blue","black","pink"];
+        console.log(color[2]);
+        // 2. 전역변수 i 숫자형 초깃값 세팅
+        var i = 0;
+        // 3. Event Listener , Event Handler
+        function chColor() {
+            /* a. 적용할 DOM 객체 선택 */
+            var selectId = document.getElementById("bgc");
+            console.log(selectId);
+            /* b. 스타일 적용 */
+            selectId.style.backgroundColor = color[i];
+            /* c. 배열값 1씩 증가 */
+            i++;
+            console.log(i);
+            /* d. 제어문으로 배열에 선택된 데이터 만큼만 증가 = 데이터 유효성 체크 */
+            if(i>=color.length) {
+                i = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="bgc">
+        <button onclick="chColor();">배경색바꾸기</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen 객체 : 사용자의 화면 크기나 화면 정보를 알아내는 것</title>
+    <script>
+        var aW = screen.width; // 가로 너비 1920
+        document.write("UI 영역을 제외한 너비 :" , aW +"<br>"); 
+
+        var aH = screen.height; // 세로 높이 1080
+        document.write("UI 영역을 제외한 높이 :" , aH +"<br>");
+        
+        /* 현재 사용자가 모바일을 사용하고 있으면 (브라우저)모바일사용자
+        현재 사용자가 PC를 사용하고 있으면 (브라우저)PC사용자 520
+        소스캡쳐, 넘버링 */
+        
+        if(aW <= 520){
+            document.write('모바일사용자');
+        }else{
+            document.write('pc사용자');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

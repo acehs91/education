@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        가변 크기 실습
+    </title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            width: 900px;
+            width: 90%;
+            height: 500px;
+            margin: 0 auto;
+        }
+        #container {
+            display: flex;
+        }
+        #container div {
+            height: 500px;
+        }
+        #container div:nth-child(1) {
+            width: 300px;
+            /* (300/900)*100 = 33.33333333333333 */
+            width: 33.33333333333333%;
+            background-color: yellowgreen;
+        }
+        #container div:nth-child(2) {
+            /* (600/900)*100 = 66.66666666666666 */
+            width: 66.66666666666666%;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+       <div id="container">
+            <div></div>
+            <div></div>
+       </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트관련요소(인라인레벨요소)</title>
+    <style>
+        /* 선택자(css적용시킬 대상지성) { 속성명:속성값; } */
+        span {
+            color: purple;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>텍스트 요소 : 웹접근성과 관련이 높은 요소들</h1>
+    <p>
+        <!-- strong 태그 : 낭독기에서 강조하여 읽어줌 , 볼드체로 보임 -->
+        <!-- b 태그 : 단지 볼드체로 보임 -->
+        <strong>주말</strong>마다 <b>서귀포 문화 예술 디자인</b> 시장이 열립니다.
+    </p>
+    <p>
+        <!-- em 태그 : 낭독기에서 강조하여 읽어줌 , 이탤릭체로 보임 -->
+        <!-- i 태그 : 단지 이탤릭체로 보임 -->
+        <em>아트마켓</em>이라고도 부르는데, <b><i>문화예술체험</i></b>이나 공연관람을 할 수 있습니다.
+    </p>
+    <h2>웹접근성</h2>
+    <p>
+        <!-- span 태그 : 인라인요소의 그룹핑 태그 | 주로 css와 연동하여 사용 -->
+        웹의 창시자 <span>팀 버너스리</span>는 <br>
+        <!-- q 태그 : 인용시 사용 | "" 생성 -->
+        <q cite="http://www.w3.org">
+            웹의 힘은 보편성에 있다.
+            장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다
+        </q>
+        <br>
+        <!-- mark 태그 : 형광펜 효과 -->
+        라는 말로 <mark>웹 접근성</mark>을 설명한다.
+    </p>
+
+    <!-- 기타 텍스트 요소들 -->
+    <p>
+        <!-- abbr 태그 : 축약 -->
+        <abbr title="WorldWideWeb">WWW</abbr>은 인터넷 발전에 많은 기여를 했다
+    </p>
+    <p>
+        <!-- sup 태그 : 윗첨자 | sub 태그 : 아랫첨자 -->
+        E=mc<sup>2</sup> <br><br>
+        H<sub>2</sub>O
+    </p>
+    <p>
+        <!-- u 태그 : 밑줄 | s 태그 : 취소선 -->
+        정기세일 : <u>2025-08-25 ~ 2025-10-31</u> <br>
+        정기세일 취소: <s>2025-08-25 ~ 2025-10-31</s> <br>
+    </p>
+    <p>
+        <!-- small 태그 : 부가정보처럼 작게 표시해도 되는 텍스트 -->
+        가격 : 20,000원 <small>(부가세별도)</small>
+    </p>
+    <!-- 링크 -->
+    <p>
+        <a href="http://www.daum.net" target="_blank">다음</a>
+        <a href="http://www.naver.com" target="_blank">네이버</a>
+    </p>
+
+</body>
+</html>

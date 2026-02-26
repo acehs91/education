@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position: absolute 실습</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            /* 위치기준값 */
+            position: relative;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #0094ff;
+        }
+        #box1 {
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        #box2 {
+            background-color: green;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        #box3 {
+            background-color: blue;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+        #box4 {
+            background-color: silver;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        #box5 {
+            background-color: purple;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            /* 박스 중앙에 레이아웃 */
+            transform: translate(-25px,-25px);
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+        <div id="box5" class="box"></div>
+    </div>
+</body>
+</html>

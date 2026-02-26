@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학객체</title>
+</head>
+<script>
+    var num = 3.283434;
+
+    var maxNum = Math.max(10, 8, 21, 40);
+    document.write("최댓값 : " + maxNum + "<br>");
+
+    var minNum = Math.min(10, 8, 21, 40);
+    document.write("최솟값 : " + minNum + "<br>");
+
+    var roundNum = Math.round(num);
+    document.write("반올림 : " + roundNum + "<br>");
+
+    var ceilNum = Math.ceil(num);
+    document.write("올림 : " + ceilNum + "<br>");
+
+    var floorNum = Math.floor(num);
+    document.write("내림 : " + floorNum + "<br>");
+
+    var randomNum = Math.random(); // 0 이상 1 미만
+    document.write("랜덤수(난수 0~1): " + randomNum + "<br>");
+
+    var imgNum = Math.floor(Math.random() * 7) + 1;
+    var img = document.querySelector("#images");
+    
+    document.write('<img src="./images/img' + imgNum + '.jpg" alt="랜덤이미지" width="300" height="300">');
+</script>
+
+<body>
+
+</body>
+
+</html>

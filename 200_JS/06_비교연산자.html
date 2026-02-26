@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var d = "20";
+        var result = null;
+
+        /* 비교연산자 : 논리값으로 결과 반환 => 결과는 true, false */
+        result = a > b; // false
+        result = a < b; // true
+        result = a >= c; // true
+        // 데이터 형과 상관없이 비교 = 숫자형태 문자열
+        result = b == d; // true
+        // (논리부정)
+        result = b != d; // false
+        // 데이터 형까지 일치해야 비교
+        result = b === d; // false
+        // (논리부정)
+        result = b !== d; // true
+        alert(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

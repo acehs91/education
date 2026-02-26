@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result = null;
+        console.log(num1,num2,result);
+        /* 1. 증감연산자++ : 초깃값을 처음에 무조건 사용할때 사용 => for문 */
+        result = num2++;
+        document.write("1. 증감연산자++ : " + result + "<br>"); //20
+        document.write("1. 증감연산자++ : " + num2 + "<br>"); //21
+        /* 2. ++증감연산자 : 일반적인 증감연산자 */
+        result = ++num2;
+        document.write("2. ++증감연산자 : " + result + "<br>"); //22
+        document.write("2. ++증감연산자 : " + num2 + "<br>"); //22
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
