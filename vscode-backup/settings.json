@@ -1,0 +1,111 @@
+{
+  // ===== VSCode UI =====
+  "workbench.iconTheme": "material-icon-theme", // 아이콘 테마
+
+  // ===== 터미널 설정 =====
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "git.autofetch": true, // 자동 fetch
+  "git.confirmSync": false, // 동기화 확인 팝업 끄기
+
+  // ===== Live Server =====
+  "liveServer.settings.wait": 300, // 저장 후 0.3초 지연 뒤 리로드
+  "liveServer.settings.donotShowInfoMsg": true, // 알림 끄기
+
+  // ===== 파일 탐색기 =====
+  "explorer.confirmDelete": false, // 삭제 확인 끄기
+  "explorer.compactFolders": false, // 폴더 트리 접힘 끄기 (구조 한눈에)
+
+  // ===== 자동 저장 & 포맷팅 =====
+  "files.autoSave": "afterDelay", // 자동 저장
+  "files.autoSaveDelay": 1000, // 저장 시 자동 정렬
+  "editor.formatOnPaste": true, // 붙여넣기 시 자동 정렬
+
+  // ===== Prettier 포맷터 =====
+  "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
+  "[css]": { "editor.defaultFormatter": "vscode.css-language-features" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // ===== Emmet 강화 =====
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact", // JSX 안에서도 Emmet
+    "vue-html": "html",
+    "vue": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "html": { "inline_break": 1 } // 태그 자동 줄바꿈
+  },
+
+  // ===== 편집기 기본 =====
+  "editor.tabSize": 2, // 들여쓰기 2칸
+  "editor.insertSpaces": true, // 탭 대신 스페이스
+  "editor.detectIndentation": false, // 파일마다 인덴트 섞이지 않게
+  "editor.lineNumbers": "on", // 라인 번호 표시
+  "editor.minimap.enabled": false, // 미니맵 끄기 (깔끔하게)
+  "editor.wordWrap": "on", // 긴 줄 자동 줄바꿈
+  "editor.cursorSmoothCaretAnimation": "on", // 커서 부드럽게 이동
+  "editor.smoothScrolling": true, // 스크롤 부드럽게
+  "editor.renderWhitespace": "all", // 공백/탭 표시
+
+  // ===== Copilot =====
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "codeium.enableCodeLens": "hide_x",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "cssrem.wxssScreenWidth": 768,
+  "cssrem.wxssDeviceWidth": 520,
+  "cssrem.vwDesign": 1920,
+  "cssrem.addMark": true,
+  "cssrem.vw": true,
+  "cssrem.wxss": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.php": "default"
+  },
+  "redhat.telemetry.enabled": true,
+  "claudeCode.preferredLocation": "sidebar",
+  "claudeCodeChat.wsl.enabled": true,
+  "claudeCodeChat.wsl.distro": "Ubuntu",
+  "claudeCodeChat.wsl.nodePath": "/usr/bin/node",
+  "claudeCodeChat.wsl.claudePath": "/usr/local/bin/claude",
+
+  // ===== 사이드바 패널 숨기기 =====
+  "timeline.excludeSources": ["*"],
+  "vscode-pets.position": "explorer",
+  "vscode-pets.throwBallWithMouse": false,
+  "checkpoints.showInActivityBar": false,
+  "jdk.telemetry.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.startupEditor": "none",
+  "chat.tools.terminal.autoApprove": {
+    "/^java -jar \"c:\\\\SpringBootWorks\\\\ShinhanEZ-main\\\\ShinhanEZ\\\\target\\\\ShinhanEZ-1\\.0\\.0\\.war\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}

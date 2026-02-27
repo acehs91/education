@@ -1,0 +1,21 @@
+// 키 바인딩을 이 파일에 넣어서 기본값 재정의
+[
+  {
+    "key": "ctrl+shift+oem_2",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+v",
+    "command": "extension.cssrem.vw-switch-px"
+  },
+  {
+    "key": "alt+v alt+w",
+    "command": "-extension.cssrem.vw-switch-px"
+  }
+]
